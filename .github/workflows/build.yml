@@ -54,6 +54,15 @@ jobs:
             data/tm/latest.json
             config/teams.json
 
+      # The checkout is the commit that started this run, which can be behind
+      # main by an earlier run's report commit (two runs on one push, or a
+      # schedule right after a push). Take the newest page hashes so lastmod
+      # dates compare against what is live, not against a stale copy.
+      - name: Use the latest page hashes from main
+        run: |
+          git fetch -q --depth=1 origin main
+          git checkout origin/main -- state/page-hashes.json
+
       # Fetches SeatGeek in memory, renders HTML, fails (and publishes
       # nothing) if SeatGeek returns too few NBA games.
       - name: Build
@@ -73,7 +82,8 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: ./scripts/publish.sh site gh-pages
 
-      # Only reports/last-build.md and state/page-hashes.json, with [skip ci].
+      # Only reports/last-build.md and state/page-hashes.json, with [skip ci],
+      # on top of the current tip of main (no rebase, so no conflicts).
       - name: Commit the build report
         if: github.ref == 'refs/heads/main'
         run: ./scripts/commit-report.sh
