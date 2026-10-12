@@ -1,0 +1,83 @@
+name: build
+
+# Every 3 hours (at :41, off the busy top of the hour), on every push to
+# main except docs and the bot's own report commits, and by hand.
+on:
+  schedule:
+    - cron: '41 */3 * * *'
+  push:
+    branches: [main]
+    paths-ignore:
+      - README.md
+      - CLAUDE.md
+      - 'reports/**'
+      - 'state/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tickets-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt pytest
+
+      # Offline tests against fixtures/. No network, no secrets.
+      - name: Tests
+        run: python -m pytest
+
+      # Read-only token for the private data repo. Only the three files the
+      # build reads are checked out, outside the site directory.
+      - name: Check out nba-tickets-data
+        uses: actions/checkout@v4
+        with:
+          repository: jsierrahoopshype/nba-tickets-data
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+          path: _data
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            data/tm/schedule.json
+            data/tm/latest.json
+            config/teams.json
+
+      # Fetches SeatGeek in memory, renders HTML, fails (and publishes
+      # nothing) if SeatGeek returns too few NBA games.
+      - name: Build
+        env:
+          SEATGEEK_CLIENT_ID: ${{ secrets.SEATGEEK_CLIENT_ID }}
+        run: python -m tickets build --out site --data-dir _data
+
+      - name: Check the output
+        run: PUBLISH_CHECK_ONLY=1 ./scripts/publish.sh site
+
+      # gh-pages is a single orphan commit, force-pushed every build, so no
+      # price history accumulates in git (CLAUDE.md rule 2).
+      - name: Publish to gh-pages
+        if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: ./scripts/publish.sh site gh-pages
+
+      # Only reports/last-build.md and state/page-hashes.json, with [skip ci].
+      - name: Commit the build report
+        if: github.ref == 'refs/heads/main'
+        run: ./scripts/commit-report.sh
+
+      - name: Job summary
+        if: always()
+        run: test -f reports/last-build.md && cat reports/last-build.md >> "$GITHUB_STEP_SUMMARY" || true
