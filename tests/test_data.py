@@ -151,3 +151,53 @@ def test_workflow_rules():
     commit = (config.ROOT / "scripts/commit-report.sh").read_text()
     assert "[skip ci]" in commit
     assert "git add reports/last-build.md state/page-hashes.json" in commit
+
+
+def test_report_stats_check_is_the_only_seatgeek_sample(tmp_path):
+    from datetime import datetime, timezone
+    from tickets import report
+    from tickets.seatgeek import diagnose
+    res = run_build(tmp_path / "s", tmp_path / "h.json")
+    diag = diagnose(raw(), config.load_settings().build)
+    assert diag["counts"]["events"] == 110
+    assert diag["counts"]["lowest_price_present"] == 109
+    assert "lowest_price" in diag["sample_stats"] and "stats" in diag["sample_fields"]
+    rp = tmp_path / "last-build.md"
+    report.write(rp, res, datetime(2026, 10, 12, tzinfo=timezone.utc), "offline fixtures", None, diag)
+    sections = rp.read_text().split("\n## ")
+    check = [s for s in sections if s.startswith("SeatGeek stats check")]
+    assert len(check) == 1 and "stats.lowest_price present (not null): 109" in check[0]
+    assert check[0].count('"lowest_price"') == 1
+    for s in sections:
+        if not s.startswith("SeatGeek stats check"):
+            assert "$" not in s and "seatgeek.com" not in s and "_price" not in s
+
+
+def test_empty_stats_say_price_not_available(tmp_path):
+    """What SeatGeek actually sent on 2026-10-12: "stats": {} for every event.
+    No page may claim there are no listings; prices are simply unavailable."""
+    events = raw()
+    for e in events:
+        e["stats"] = {}
+    res = run_build(tmp_path / "site", tmp_path / "h.json", raw=events)
+    assert res.merged.matched == 89
+    site = tmp_path / "site"
+    for p in pages(site):
+        html = p.read_text()
+        assert "No listings on SeatGeek" not in html, p
+        assert "with listings" not in html and "with SeatGeek listings" not in html, p
+    hub = (site / "index.html").read_text()
+    assert "Price not available" in hub
+    assert "SeatGeek prices aren&#39;t available right now." in hub
+    lakers = (site / "los-angeles-lakers/index.html").read_text()
+    assert "Price not available" in lakers and 'class="p">$' not in lakers
+
+
+def test_price_without_listing_count_still_counts(tmp_path):
+    events = raw()
+    for e in events:
+        e["stats"].pop("listing_count", None)
+        e["stats"].pop("visible_listing_count", None)
+    run_build(tmp_path / "site", tmp_path / "h.json", raw=events)
+    html = (tmp_path / "site/nuggets-at-lakers/index.html").read_text()
+    assert 'class="p">$' in html and " listings</span>" not in html

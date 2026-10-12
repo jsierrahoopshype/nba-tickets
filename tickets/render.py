@@ -65,7 +65,8 @@ def file_hash(path: Path) -> str:
 
 class Renderer:
     def __init__(self, settings, links, logos: dict[str, str], updated: datetime,
-                 no_tm_home: set[str], seatgeek_logo: str | None, asset_hashes: dict[str, str]):
+                 no_tm_home: set[str], seatgeek_logo: str | None, asset_hashes: dict[str, str],
+                 prices_available: bool = True):
         self.settings = settings
         self.copy = settings.copy
         self.env = Environment(
@@ -98,6 +99,9 @@ class Renderer:
             seatgeek_logo=seatgeek_logo,
             no_tm_home=no_tm_home,
             terms_path=config.site_path("terms/"),
+            # False when SeatGeek sent no prices at all this build: empty
+            # sections then say prices are unavailable, not "no listings".
+            prices_available=prices_available,
         )
         self.no_tm_home = no_tm_home
 

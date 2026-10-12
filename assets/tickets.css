@@ -63,7 +63,6 @@ ul.plain,ol.plain{list-style:none;padding:0}
 /* header */
 .hdr{display:flex;align-items:center;gap:.7rem;margin:.2rem 0 .35rem}
 .hdr h1{font-size:1.3rem;font-weight:700;letter-spacing:-.03em;line-height:1.2;flex:1}
-.hdr .brand{font-family:var(--mono);font-size:.66rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;display:none}
 .hdr .lg{width:44px;height:44px}
 .subtitle{color:var(--text-secondary);font-size:.88rem;margin:0 0 .9rem;max-width:60rem}
 
@@ -80,7 +79,6 @@ ul.plain,ol.plain{list-style:none;padding:0}
 .block{margin:0 0 1.6rem}
 .block-head{display:flex;align-items:baseline;justify-content:space-between;gap:.3rem 1rem;margin:0 0 .6rem;flex-wrap:wrap}
 .block-head h2{font-size:1rem;font-weight:700;letter-spacing:-.01em}
-.block-head .sub{font-family:var(--mono);font-size:.66rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.05em}
 .block-intro{font-size:.82rem;color:var(--text-secondary);margin:-.2rem 0 .7rem;max-width:48rem}
 .section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin:0 0 1.1rem}
 .section h2{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);font-weight:600;margin:0 0 .5rem}
@@ -115,7 +113,7 @@ ul.plain,ol.plain{list-style:none;padding:0}
 .gm-venue{flex-basis:100%;font-family:var(--mono);font-size:.66rem;font-weight:500;color:var(--text-secondary)}
 .gm-price{grid-area:price;text-align:right;align-self:start}
 .gm-price .p{display:block;font-family:var(--mono);font-size:1.3rem;font-weight:700;letter-spacing:-.02em;line-height:1.15}
-.gm-price .p.none{font-size:.72rem;font-weight:600;color:var(--text-secondary);max-width:7rem;line-height:1.3}
+.gm-price .p.none{font-size:.72rem;font-weight:600;color:var(--text-secondary);max-width:7rem;line-height:1.3;margin-left:auto}
 .gm-price .lbl{display:block;font-size:.56rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);font-weight:600}
 .gm-sub{display:block;font-family:var(--mono);font-size:.64rem;color:var(--text-secondary);white-space:nowrap}
 .gm-meta{grid-area:meta;display:flex;flex-wrap:wrap;align-items:center;gap:.2rem .6rem;font-size:.76rem;margin-top:.25rem}
@@ -219,7 +217,6 @@ ul.plain,ol.plain{list-style:none;padding:0}
 @media(min-width:860px){
   .container{padding:1.5rem 1.5rem 4rem}
   .hdr h1{font-size:1.5rem}
-  .hdr .brand{display:inline}
   .subtitle{font-size:.92rem}
   .egrid{grid-template-columns:repeat(5,1fr)}
   .gm{grid-template-columns:7.5rem minmax(0,1fr) 11rem minmax(9rem,auto);

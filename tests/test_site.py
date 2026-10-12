@@ -160,3 +160,16 @@ def test_terms_page(site):
     assert len(body.split()) < 300
     assert "SeatGeek Inc. and its affiliates are third-party beneficiaries" in body
     assert "commission" in body
+
+
+def test_titles_stand_alone(site):
+    """Design rule: no eyebrow or kicker line above or beside any title."""
+    site_dir, _ = site
+    for p in pages(site_dir):
+        html = p.read_text()
+        assert 'class="brand"' not in html, p
+        hdr = re.search(r'<header class="hdr">(.*?)</header>', html, re.S).group(1)
+        assert re.sub(r"<img[^>]*>|<span class=\"lg[^\"]*\"[^>]*>[A-Z]{3}</span>", "", hdr).strip().startswith("<h1>"), p
+        assert hdr.strip().endswith("</h1>"), p
+        for head in re.findall(r'<div class="block-head">(.*?)</div>', html, re.S):
+            assert re.fullmatch(r"\s*<h2>[^<]*</h2>\s*", head), (p, head)

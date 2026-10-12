@@ -14,7 +14,7 @@
 
 <section class="block" id="cheapest">
 <div class="block-head"><h2>{{ copy.arena.cheapest_heading }}</h2></div>
-{{ game_list(cheapest_nights, me=t, empty="No games here with SeatGeek listings yet.") }}
+{{ game_list(cheapest_nights, me=t, empty=(copy.price_terms.prices_unavailable if not prices_available else "No games here with SeatGeek listings yet.")) }}
 </section>
 
 <section class="block" id="visitors">
@@ -29,7 +29,7 @@
 <span class="v {{ 'up' if v.ratio > 1.005 else ('down' if v.ratio < 0.995 else '') }}">{{ v.get_in|money }}<small>{{ v.ratio|pct_diff }} vs avg</small></span></li>
 {% endfor %}
 </ol>
-{% else %}<p class="empty">No games here with SeatGeek listings yet.</p>{% endif %}
+{% else %}<p class="empty">{{ copy.price_terms.prices_unavailable if not prices_available else "No games here with SeatGeek listings yet." }}</p>{% endif %}
 </section>
 
 <section class="section" id="concessions">
@@ -48,7 +48,7 @@
 </section>
 
 <section class="block" id="games">
-<div class="block-head"><h2>{{ copy.arena.games_heading.format(**kw) }}</h2><span class="sub">{{ games|length }} games</span></div>
+<div class="block-head"><h2>{{ copy.arena.games_heading.format(**kw) }}</h2></div>
 {{ game_list(games, me=t, empty="No games left here this season.") }}
 </section>
 {% endblock %}

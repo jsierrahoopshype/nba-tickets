@@ -19,12 +19,12 @@
 <a href="{{ arena_path(t) }}">{{ t.arena }} guide</a><a href="{{ how_to_watch(t) }}">How to watch the {{ t.short_name }}</a></div>
 
 <section class="block" id="home">
-<div class="block-head"><h2>{{ copy.team.home_heading.format(**kw) }}</h2><span class="sub">{{ ts.home|length }} games</span></div>
+<div class="block-head"><h2>{{ copy.team.home_heading.format(**kw) }}</h2></div>
 {{ game_list(ts.home, me=t, empty="No home games left this season.") }}
 </section>
 
 <section class="block" id="road">
-<div class="block-head"><h2>{{ copy.team.road_heading }}</h2><span class="sub">{{ ts.road|length }} games</span></div>
+<div class="block-head"><h2>{{ copy.team.road_heading }}</h2></div>
 {{ game_list(ts.road, me=t, empty="No road games left this season.") }}
 </section>
 

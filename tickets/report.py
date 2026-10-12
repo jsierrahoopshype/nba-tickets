@@ -6,13 +6,54 @@ in here: this file is committed to main (CLAUDE.md rule 1).
 
 from __future__ import annotations
 
+import json
 from datetime import datetime
 from pathlib import Path
 
 from .build import BuildResult
 
 
-def write(path: Path, res: BuildResult, now: datetime, mode: str, commit: str | None) -> None:
+def stats_check(diag: dict | None) -> list[str]:
+    """The SeatGeek stats check. The one place a SeatGeek number may appear in
+    this file: a single event's raw stats object, asked for by the owner to
+    diagnose missing prices (CLAUDE.md rule 1 notes the exception)."""
+    if not diag:
+        return []
+    c = diag["counts"]
+    out = [
+        "## SeatGeek stats check",
+        "",
+        f"- Events returned: {c['events']}",
+        f"- Events with a stats object: {c['with_stats_object']}",
+        f"- stats.lowest_price present (not null): {c['lowest_price_present']}",
+        f"- stats.lowest_price > 0: {c['lowest_price_positive']}",
+        f"- stats.listing_count > 0: {c['listing_count_positive']}",
+        f"- stats.visible_listing_count > 0: {c['visible_listing_count_positive']}",
+        "- stats fields that are not null, and in how many events: "
+        + (", ".join(f"`{k}` {n}" for k, n in diag["filled"].items()) or "none"),
+        f"- Top-level fields of event {diag['sample_id']}: "
+        + ", ".join(f"`{k}`" for k in diag["sample_fields"]),
+        f"- stats of event {diag['sample_id']} (search response):",
+        "",
+        "```json",
+        json.dumps(diag["sample_stats"], indent=2, sort_keys=True),
+        "```",
+        "",
+    ]
+    if diag.get("single_event_checked"):
+        out += [
+            f"- stats of the same event from the single-event endpoint (/2/events/{diag['sample_id']}):",
+            "",
+            "```json",
+            json.dumps(diag["single_event_stats"], indent=2, sort_keys=True),
+            "```",
+            "",
+        ]
+    return out
+
+
+def write(path: Path, res: BuildResult, now: datetime, mode: str, commit: str | None,
+          diag: dict | None = None) -> None:
     m, p = res.merged, res.parsed
     lines = [
         "# Last build",
@@ -55,6 +96,7 @@ def write(path: Path, res: BuildResult, now: datetime, mode: str, commit: str | 
             lines.append(f"- … and {len(keys) - 200} more")
         lines.append("")
 
+    lines.extend(stats_check(diag))
     block("Unmatched SeatGeek games", m.sg_unmatched)
     block("Unmatched Ticketmaster games", m.tm_unmatched)
     block("Matched one day apart", m.shifted)

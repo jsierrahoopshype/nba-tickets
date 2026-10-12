@@ -104,7 +104,8 @@ def build(out: Path, settings: config.Settings, sg_raw: list[dict], tm: TMData, 
                     for p in ASSETS.rglob("*") if p.is_file() and p.suffix in (".css", ".js")}
 
     links = Links(settings.affiliate)
-    r = Renderer(settings, links, logo_paths, now, no_tm_home, sg_logo, asset_hashes)
+    r = Renderer(settings, links, logo_paths, now, no_tm_home, sg_logo, asset_hashes,
+                 prices_available=bool(priced(games)))
     copy = settings.copy
     season = copy["season_label"]
     launched = settings.launched

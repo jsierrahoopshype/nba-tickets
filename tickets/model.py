@@ -65,7 +65,16 @@ class SGStats:
 
     @property
     def priced(self) -> bool:
-        return self.lowest is not None and self.lowest > 0 and (self.listings or 0) > 0
+        """A positive lowest_price is a price. listing_count is extra
+        information shown beside it when SeatGeek sends it; a missing count
+        never hides a price."""
+        return self.lowest is not None and self.lowest > 0
+
+    @property
+    def no_listings(self) -> bool:
+        """SeatGeek said so explicitly: listing_count is 0. A missing or empty
+        stats object is not the same thing, it means no price data at all."""
+        return not self.priced and self.listings == 0
 
 
 @dataclass

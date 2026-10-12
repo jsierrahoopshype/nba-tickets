@@ -17,9 +17,12 @@
 <div class="gm-price">
 {% if g.price is not none %}
 <span class="p">{{ g.price|money }}</span><span class="lbl">{{ copy.price_terms.get_in }}</span>
-<span class="gm-sub">{% if g.sg.median %}{{ copy.price_terms.median }} {{ g.sg.median|money }} · {% endif %}{{ "{:,}".format(g.sg.listings) }} {{ copy.price_terms.listings|lower }}</span>
-{% elif g.sg %}
+{% set parts = [] %}{% if g.sg.median %}{% set _ = parts.append(copy.price_terms.median ~ " " ~ (g.sg.median|money)) %}{% endif %}{% if g.sg.listings is not none %}{% set _ = parts.append("{:,}".format(g.sg.listings) ~ " " ~ copy.price_terms.listings|lower) %}{% endif %}
+{% if parts %}<span class="gm-sub">{{ parts|join(" · ") }}</span>{% endif %}
+{% elif g.sg and g.sg.no_listings %}
 <span class="p none">{{ copy.price_terms.no_price }}</span>
+{% elif g.sg %}
+<span class="p none">{{ copy.price_terms.unavailable }}</span>
 {% else %}
 <span class="p none">{{ copy.price_terms.not_on_seatgeek }}</span>
 {% endif %}

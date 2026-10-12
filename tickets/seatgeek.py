@@ -44,7 +44,7 @@ def fetch_events(client_id: str, today: date, build: dict, session=None) -> list
             "datetime_utc.gte": today.isoformat(),
             "datetime_utc.lte": build["season_end"],
         }
-        data = _get(http, params, client_id)
+        data = _get(http, API_URL, params, client_id)
         batch = data.get("events") or []
         events.extend(batch)
         total = (data.get("meta") or {}).get("total", total)
@@ -54,11 +54,11 @@ def fetch_events(client_id: str, today: date, build: dict, session=None) -> list
     return events
 
 
-def _get(http, params: dict, client_id: str) -> dict:
+def _get(http, url: str, params: dict, client_id: str) -> dict:
     delay = 2.0
     for attempt in range(4):
         try:
-            resp = http.get(API_URL, params=params, timeout=30)
+            resp = http.get(url, params=params, timeout=30)
         except Exception as exc:  # network error: retry, never print params
             err = f"network error ({type(exc).__name__})"
         else:
@@ -73,6 +73,61 @@ def _get(http, params: dict, client_id: str) -> dict:
             time.sleep(delay)
             delay *= 2
     raise SeatGeekError(f"SeatGeek failed after retries: {err}")
+
+
+def fetch_event_stats(client_id: str, event_id: int, session=None) -> dict | None:
+    """The single-event endpoint's stats for one event (one call, used only by
+    the stats check in the build report). Returns None on any error."""
+    import requests
+
+    http = session or requests.Session()
+    try:
+        data = _get(http, f"{API_URL}/{int(event_id)}", {"client_id": client_id}, client_id)
+    except SeatGeekError:
+        return None
+    return data.get("stats") if isinstance(data, dict) else None
+
+
+STAT_KEYS = ("lowest_price", "median_price", "average_price", "highest_price",
+             "listing_count", "visible_listing_count")
+
+
+def diagnose(raw: list[dict], build: dict) -> dict:
+    """What the response actually carries in `stats`, for the build report:
+    how many events have each stats field filled, plus one regular-season
+    event's top-level field names and its full stats object. Counts only,
+    apart from that one sample."""
+    start = date.fromisoformat(build["season_start"])
+    counts = {"events": len(raw), "with_stats_object": 0, "lowest_price_present": 0,
+              "lowest_price_positive": 0, "listing_count_positive": 0,
+              "visible_listing_count_positive": 0}
+    filled: dict[str, int] = {}
+    sample = None
+    for ev in raw:
+        stats = ev.get("stats")
+        if isinstance(stats, dict):
+            counts["with_stats_object"] += 1
+            for k, v in stats.items():
+                if v is not None:
+                    filled[k] = filled.get(k, 0) + 1
+        else:
+            stats = {}
+        low = _num(stats.get("lowest_price"))
+        counts["lowest_price_present"] += low is not None
+        counts["lowest_price_positive"] += bool(low and low > 0)
+        counts["listing_count_positive"] += bool((_num(stats.get("listing_count")) or 0) > 0)
+        counts["visible_listing_count_positive"] += bool((_num(stats.get("visible_listing_count")) or 0) > 0)
+        d, _ = parse_local(ev.get("datetime_local"))
+        if sample is None and d is not None and d >= start and len(ev.get("performers") or []) >= 2:
+            sample = ev
+    return {
+        "counts": counts,
+        "filled": dict(sorted(filled.items())),
+        "sample_id": sample.get("id") if sample else None,
+        "sample_fields": sorted(sample.keys()) if sample else [],
+        "sample_stats": sample.get("stats") if sample else None,
+        "single_event_stats": None,
+    }
 
 
 def load_fixture(directory: Path) -> list[dict]:
@@ -141,6 +196,14 @@ def _num(v):
         return None
 
 
+def _count(stats: dict) -> int | None:
+    for key in ("listing_count", "visible_listing_count"):
+        v = _num(stats.get(key))
+        if v is not None:
+            return int(v)
+    return None
+
+
 def parse_events(raw: list[dict], teams: list[Team], build: dict) -> ParseResult:
     matcher = TeamMatcher(teams)
     start = date.fromisoformat(build["season_start"])
@@ -201,7 +264,7 @@ def parse_events(raw: list[dict], teams: list[Team], build: dict) -> ParseResult
                 median=_num(stats.get("median_price")),
                 average=_num(stats.get("average_price")),
                 highest=_num(stats.get("highest_price")),
-                listings=int(stats["listing_count"]) if stats.get("listing_count") is not None else None,
+                listings=_count(stats),
             ),
             home_from=home_from,
         ))
