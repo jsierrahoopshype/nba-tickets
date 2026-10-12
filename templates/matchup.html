@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import game_list, team_logo %}
+{% block intro %}<p class="subtitle">{{ copy.matchup.intro.format(**kw) }}</p>{% endblock %}
+{% block content %}
+<section class="block" id="games">
+<div class="block-head"><h2>{{ games|length }} game{{ "s" if games|length != 1 }} left this season</h2></div>
+{{ game_list(games, empty=copy.matchup.none.format(**kw)) }}
+</section>
+
+<section class="section">
+<h2>{{ copy.matchup.how_to_watch }}</h2>
+<p class="small"><a href="{{ how_to_watch(away) }}">How to watch the {{ away.short_name }}</a> · <a href="{{ how_to_watch(home) }}">How to watch the {{ home.short_name }}</a></p>
+<h2 style="margin-top:.8rem">More tickets</h2>
+<ul class="egrid">
+<li><a class="ecard" href="{{ matchup_path(home, away) }}">{{ team_logo(home) }}<span>{{ copy.matchup.reverse.format(**kw) }}<small>at {{ away.arena }}</small></span></a></li>
+<li><a class="ecard" href="{{ team_path(away) }}">{{ team_logo(away) }}<span>{{ away.short_name }}<small>all games</small></span></a></li>
+<li><a class="ecard" href="{{ team_path(home) }}">{{ team_logo(home) }}<span>{{ home.short_name }}<small>all games</small></span></a></li>
+<li><a class="ecard" href="{{ arena_path(home) }}"><span>{{ home.arena }}<small>parking, food, cheapest nights</small></span></a></li>
+</ul>
+</section>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import game_list, team_logo, concessions %}
+{% block logo %}{{ team_logo(t, 44) }}{% endblock %}
+{% block intro %}<p class="subtitle">{{ copy.team.intro.format(**kw) }}{% if no_tm %} {{ copy.team.no_tm_note.format(**kw) }}{% endif %}</p>{% endblock %}
+{% block content %}
+{% set ch = ts.cheapest_home %}
+{% set cr = ts.cheapest_road %}
+<div class="stat-cards">
+<div class="stat-card"><div class="lbl">{{ copy.team.cheapest_home }}</div>
+{% if ch %}<div class="num">{{ ch.price|money }}</div><div class="sub"><a href="#{{ ch.anchor }}">vs {{ ch.away.short_name }}, {{ ch.date|dshort }}</a></div>{% else %}<div class="num">n/a</div>{% endif %}</div>
+<div class="stat-card"><div class="lbl">{{ copy.team.cheapest_road }}</div>
+{% if cr %}<div class="num">{{ cr.price|money }}</div><div class="sub"><a href="#{{ cr.anchor }}">at {{ cr.home.short_name }}, {{ cr.date|dshort }}</a></div>{% else %}<div class="num">n/a</div>{% endif %}</div>
+<div class="stat-card"><div class="lbl">{{ copy.team.rank_label }}</div>
+{% if ts.rank %}<div class="num">#{{ ts.rank }}</div><div class="sub">{{ copy.team.rank_note.format(n=ranked_n) }}: {{ ts.home_avg|money }}</div>{% else %}<div class="num">n/a</div>{% endif %}</div>
+<div class="stat-card"><div class="lbl">{{ copy.team.premium_label }}</div>
+{% if ts.premium %}<div class="num">{{ ts.premium|ratio }}</div><div class="sub">#{{ ts.premium_rank }} of {{ prem_n }}, {{ copy.team.premium_note }}</div>{% else %}<div class="num">n/a</div>{% endif %}</div>
+</div>
+<div class="team-actions"><button type="button" class="btn" data-set-team="{{ t.slug }}">Make the {{ t.short_name }} my team</button>
+<a href="{{ arena_path(t) }}">{{ t.arena }} guide</a><a href="{{ how_to_watch(t) }}">How to watch the {{ t.short_name }}</a></div>
+
+<section class="block" id="home">
+<div class="block-head"><h2>{{ copy.team.home_heading.format(**kw) }}</h2><span class="sub">{{ ts.home|length }} games</span></div>
+{{ game_list(ts.home, me=t, empty="No home games left this season.") }}
+</section>
+
+<section class="block" id="road">
+<div class="block-head"><h2>{{ copy.team.road_heading }}</h2><span class="sub">{{ ts.road|length }} games</span></div>
+{{ game_list(ts.road, me=t, empty="No road games left this season.") }}
+</section>
+
+<section class="section" id="arena">
+<h2>{{ copy.team.concessions_heading.format(**kw) }}</h2>
+{{ concessions(t, con) }}
+<p class="small"><a href="{{ arena_path(t) }}">Every game at {{ t.arena }}, cheapest nights and the family-of-four cost</a></p>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ asset('assets/tickets.js') }}" defer></script>{% endblock %}

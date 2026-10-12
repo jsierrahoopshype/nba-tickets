@@ -1,0 +1,215 @@
+{
+ "season": "2026-27",
+ "teams": [
+  {
+   "code": "ATL",
+   "name": "Atlanta Hawks",
+   "short_name": "Hawks",
+   "arena": "State Farm Arena",
+   "city": "Atlanta"
+  },
+  {
+   "code": "BOS",
+   "name": "Boston Celtics",
+   "short_name": "Celtics",
+   "arena": "TD Garden",
+   "city": "Boston"
+  },
+  {
+   "code": "BKN",
+   "name": "Brooklyn Nets",
+   "short_name": "Nets",
+   "arena": "Barclays Center",
+   "city": "Brooklyn"
+  },
+  {
+   "code": "CHA",
+   "name": "Charlotte Hornets",
+   "short_name": "Hornets",
+   "arena": "Spectrum Center",
+   "city": "Charlotte"
+  },
+  {
+   "code": "CHI",
+   "name": "Chicago Bulls",
+   "short_name": "Bulls",
+   "arena": "United Center",
+   "city": "Chicago"
+  },
+  {
+   "code": "CLE",
+   "name": "Cleveland Cavaliers",
+   "short_name": "Cavaliers",
+   "arena": "Rocket Arena",
+   "city": "Cleveland"
+  },
+  {
+   "code": "DAL",
+   "name": "Dallas Mavericks",
+   "short_name": "Mavericks",
+   "arena": "American Airlines Center",
+   "city": "Dallas"
+  },
+  {
+   "code": "DEN",
+   "name": "Denver Nuggets",
+   "short_name": "Nuggets",
+   "arena": "Ball Arena",
+   "city": "Denver"
+  },
+  {
+   "code": "DET",
+   "name": "Detroit Pistons",
+   "short_name": "Pistons",
+   "arena": "Little Caesars Arena",
+   "city": "Detroit"
+  },
+  {
+   "code": "GSW",
+   "name": "Golden State Warriors",
+   "short_name": "Warriors",
+   "arena": "Chase Center",
+   "city": "San Francisco"
+  },
+  {
+   "code": "HOU",
+   "name": "Houston Rockets",
+   "short_name": "Rockets",
+   "arena": "Toyota Center",
+   "city": "Houston"
+  },
+  {
+   "code": "IND",
+   "name": "Indiana Pacers",
+   "short_name": "Pacers",
+   "arena": "Gainbridge Fieldhouse",
+   "city": "Indianapolis"
+  },
+  {
+   "code": "LAC",
+   "name": "LA Clippers",
+   "short_name": "Clippers",
+   "arena": "Intuit Dome",
+   "city": "Inglewood"
+  },
+  {
+   "code": "LAL",
+   "name": "Los Angeles Lakers",
+   "short_name": "Lakers",
+   "arena": "Crypto.com Arena",
+   "city": "Los Angeles"
+  },
+  {
+   "code": "MEM",
+   "name": "Memphis Grizzlies",
+   "short_name": "Grizzlies",
+   "arena": "FedExForum",
+   "city": "Memphis"
+  },
+  {
+   "code": "MIA",
+   "name": "Miami Heat",
+   "short_name": "Heat",
+   "arena": "Kaseya Center",
+   "city": "Miami"
+  },
+  {
+   "code": "MIL",
+   "name": "Milwaukee Bucks",
+   "short_name": "Bucks",
+   "arena": "Fiserv Forum",
+   "city": "Milwaukee"
+  },
+  {
+   "code": "MIN",
+   "name": "Minnesota Timberwolves",
+   "short_name": "Timberwolves",
+   "arena": "Target Center",
+   "city": "Minneapolis"
+  },
+  {
+   "code": "NOP",
+   "name": "New Orleans Pelicans",
+   "short_name": "Pelicans",
+   "arena": "Smoothie King Center",
+   "city": "New Orleans"
+  },
+  {
+   "code": "NYK",
+   "name": "New York Knicks",
+   "short_name": "Knicks",
+   "arena": "Madison Square Garden",
+   "city": "New York"
+  },
+  {
+   "code": "OKC",
+   "name": "Oklahoma City Thunder",
+   "short_name": "Thunder",
+   "arena": "Paycom Center",
+   "city": "Oklahoma City"
+  },
+  {
+   "code": "ORL",
+   "name": "Orlando Magic",
+   "short_name": "Magic",
+   "arena": "Kia Center",
+   "city": "Orlando"
+  },
+  {
+   "code": "PHI",
+   "name": "Philadelphia 76ers",
+   "short_name": "76ers",
+   "arena": "Xfinity Mobile Arena",
+   "city": "Philadelphia"
+  },
+  {
+   "code": "PHX",
+   "name": "Phoenix Suns",
+   "short_name": "Suns",
+   "arena": "Mortgage Matchup Center",
+   "city": "Phoenix"
+  },
+  {
+   "code": "POR",
+   "name": "Portland Trail Blazers",
+   "short_name": "Trail Blazers",
+   "arena": "Moda Center",
+   "city": "Portland"
+  },
+  {
+   "code": "SAC",
+   "name": "Sacramento Kings",
+   "short_name": "Kings",
+   "arena": "Golden 1 Center",
+   "city": "Sacramento"
+  },
+  {
+   "code": "SAS",
+   "name": "San Antonio Spurs",
+   "short_name": "Spurs",
+   "arena": "Frost Bank Center",
+   "city": "San Antonio"
+  },
+  {
+   "code": "TOR",
+   "name": "Toronto Raptors",
+   "short_name": "Raptors",
+   "arena": "Scotiabank Arena",
+   "city": "Toronto"
+  },
+  {
+   "code": "UTA",
+   "name": "Utah Jazz",
+   "short_name": "Jazz",
+   "arena": "Delta Center",
+   "city": "Salt Lake City"
+  },
+  {
+   "code": "WAS",
+   "name": "Washington Wizards",
+   "short_name": "Wizards",
+   "arena": "Capital One Arena",
+   "city": "Washington"
+  }
+ ]
+}

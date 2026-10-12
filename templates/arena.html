@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import game_list, team_logo, concessions %}
+{% block logo %}{{ team_logo(t, 44) }}{% endblock %}
+{% block intro %}<p class="subtitle">{{ copy.arena.intro.format(**kw) }} <a href="{{ team_path(t) }}">All {{ t.short_name }} games, home and road</a>.</p>{% endblock %}
+{% block content %}
+<div class="stat-cards">
+<div class="stat-card"><div class="lbl">Games left here</div><div class="num">{{ games|length }}</div></div>
+<div class="stat-card"><div class="lbl">Average get-in</div><div class="num">{{ avg|money if avg else "n/a" }}</div><div class="sub">{{ copy.price_terms.get_in_long }}</div></div>
+<div class="stat-card"><div class="lbl">Cheapest night</div>
+{% if cheapest_nights %}<div class="num">{{ cheapest_nights[0].price|money }}</div><div class="sub"><a href="#{{ cheapest_nights[0].anchor }}">vs {{ cheapest_nights[0].away.short_name }}, {{ cheapest_nights[0].date|dshort }}</a></div>{% else %}<div class="num">n/a</div>{% endif %}</div>
+<div class="stat-card"><div class="lbl">{{ copy.arena.family_heading }}</div>
+{% if family %}<div class="num">{{ family.total|money }}</div><div class="sub">cheapest night</div>{% else %}<div class="num">n/a</div><div class="sub">needs food prices</div>{% endif %}</div>
+</div>
+
+<section class="block" id="cheapest">
+<div class="block-head"><h2>{{ copy.arena.cheapest_heading }}</h2></div>
+{{ game_list(cheapest_nights, me=t, empty="No games here with SeatGeek listings yet.") }}
+</section>
+
+<section class="block" id="visitors">
+<div class="block-head"><h2>{{ copy.arena.visitors_heading }}</h2></div>
+{% if visitors %}
+<p class="block-intro">{{ copy.arena.visitors_intro.format(**kw) }}</p>
+<ol class="rl">
+{% for v in visitors %}
+<li><span class="rk">{{ loop.index }}</span>
+<span class="nm">{{ team_logo(v.team, 28) }}<span><a href="{{ matchup_path(v.team, t) }}">{{ v.team.short_name }}</a>
+<small>{{ v.games|length }} game{{ "s" if v.games|length != 1 }} · {{ v.games[0].date|dshort }}</small></span></span>
+<span class="v {{ 'up' if v.ratio > 1.005 else ('down' if v.ratio < 0.995 else '') }}">{{ v.get_in|money }}<small>{{ v.ratio|pct_diff }} vs avg</small></span></li>
+{% endfor %}
+</ol>
+{% else %}<p class="empty">No games here with SeatGeek listings yet.</p>{% endif %}
+</section>
+
+<section class="section" id="concessions">
+<h2>{{ copy.arena.concessions_heading }}</h2>
+{{ concessions(t, con) }}
+<h2 style="margin-top:1rem">{{ copy.arena.family_heading }}</h2>
+{% if family %}
+<p class="small muted">{{ copy.arena.family_note }}</p>
+<ul class="fam">
+{% for label, value in family.parts %}<li><span>{{ label }}</span><span class="mono">{{ value|money }}</span></li>{% endfor %}
+<li class="total"><span>Total</span><span class="mono">{{ family.total|money }}</span></li>
+</ul>
+{% else %}
+<p class="small muted">{{ copy.arena.family_missing.format(**kw) }}</p>
+{% endif %}
+</section>
+
+<section class="block" id="games">
+<div class="block-head"><h2>{{ copy.arena.games_heading.format(**kw) }}</h2><span class="sub">{{ games|length }} games</span></div>
+{{ game_list(games, me=t, empty="No games left here this season.") }}
+</section>
+{% endblock %}

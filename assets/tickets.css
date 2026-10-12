@@ -1,0 +1,232 @@
+/* HoopsMatic NBA tickets.
+   Design language follows the NBA Polymarket tracker on hoopsmatic.com
+   (jsierrahoopshype/nba-polymarket docs/styles.css): same tokens, section
+   tabs, 12px cards with a 1px border, small uppercase labels, JetBrains Mono
+   for numbers. Written mobile first: the base rules are the 375px layout and
+   the min-width queries widen it.
+   No site nav lives here: the hoopsmatic.com Worker injects the shared nav.
+   Fonts are self-hosted (fonts/LICENSE.txt), so pages ask no other domain
+   for anything. */
+
+@font-face{font-family:'DM Sans';font-style:normal;font-display:swap;font-weight:100 1000;
+  src:url(fonts/dm-sans-latin-wght-normal.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-display:swap;font-weight:100 1000;
+  src:url(fonts/dm-sans-latin-ext-wght-normal.woff2) format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-display:swap;font-weight:100 800;
+  src:url(fonts/jetbrains-mono-latin-wght-normal.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --bg:#f5f5f7;--surface:#fff;--surface-hover:#f0f0f2;--border:#d1d1d6;--border-soft:#e2e5e9;
+  --text:#1d1d1f;--text-secondary:#5f5f66;--accent:#3b82f6;--accent-ink:#1d4ed8;--accent-dim:rgba(59,130,246,.15);
+  --green:#1d8a40;--green-dim:rgba(52,199,89,.16);
+  --red:#c42626;--red-dim:rgba(239,68,68,.13);
+  --orange:#9a5c00;--orange-dim:rgba(245,158,11,.16);
+  --radius:12px;--radius-sm:8px;--tap:44px;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--text);font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:1rem 1rem 3rem}
+a{color:var(--accent-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,p,ul,ol{margin:0}
+ul.plain,ol.plain{list-style:none;padding:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--text-secondary)}
+.small{font-size:.8rem}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* disclosure (only when an affiliate vendor is enabled) */
+.disclosure{font-size:.78rem;color:var(--text-secondary);background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm);padding:.45rem .7rem;margin:0 0 .8rem}
+
+/* section tabs */
+.tabs{display:flex;gap:.3rem;margin:0 0 .6rem;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{font-family:var(--mono);font-size:.72rem;font-weight:600;padding:0 .8rem;min-height:36px;display:inline-flex;
+  align-items:center;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text-secondary);
+  white-space:nowrap}
+.tabs a:hover{border-color:var(--accent);color:var(--accent-ink);text-decoration:none}
+.tabs a.active{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+
+/* breadcrumb */
+.crumbs{font-size:.78rem;color:var(--text-secondary);display:flex;flex-wrap:wrap;align-items:center;margin:0 0 .1rem}
+.crumbs a{color:var(--text-secondary);display:inline-flex;align-items:center;min-height:32px}
+.crumbs .sep{margin:0 .4rem;opacity:.6}
+
+/* header */
+.hdr{display:flex;align-items:center;gap:.7rem;margin:.2rem 0 .35rem}
+.hdr h1{font-size:1.3rem;font-weight:700;letter-spacing:-.03em;line-height:1.2;flex:1}
+.hdr .brand{font-family:var(--mono);font-size:.66rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;display:none}
+.hdr .lg{width:44px;height:44px}
+.subtitle{color:var(--text-secondary);font-size:.88rem;margin:0 0 .9rem;max-width:60rem}
+
+/* SeatGeek attribution: shown wherever SeatGeek prices appear */
+.sg-attrib{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;font-family:var(--mono);font-size:.7rem;
+  color:var(--text-secondary);margin:0 0 1rem}
+.sg-attrib a.sg-logo{display:inline-flex;align-items:center;min-height:32px}
+.sg-attrib img{height:18px;width:auto;display:block}
+.sg-attrib .sg-word{font-family:var(--sans);font-weight:700;font-size:.82rem;color:var(--text);
+  border:1px solid var(--border);border-radius:6px;padding:.1rem .45rem;background:var(--surface)}
+.block-head .sg-attrib{margin:0}
+
+/* blocks */
+.block{margin:0 0 1.6rem}
+.block-head{display:flex;align-items:baseline;justify-content:space-between;gap:.3rem 1rem;margin:0 0 .6rem;flex-wrap:wrap}
+.block-head h2{font-size:1rem;font-weight:700;letter-spacing:-.01em}
+.block-head .sub{font-family:var(--mono);font-size:.66rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.05em}
+.block-intro{font-size:.82rem;color:var(--text-secondary);margin:-.2rem 0 .7rem;max-width:48rem}
+.section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin:0 0 1.1rem}
+.section h2{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);font-weight:600;margin:0 0 .5rem}
+.empty{color:var(--text-secondary);font-size:.86rem;background:var(--surface);border:1px dashed var(--border);
+  border-radius:var(--radius);padding:1rem;text-align:center}
+
+/* stat cards */
+.stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:0 0 1.2rem}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.7rem .75rem;min-width:0}
+.stat-card .lbl{font-size:.6rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin:0 0 .2rem}
+.stat-card .num{font-family:var(--mono);font-size:1.25rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.stat-card .sub{font-family:var(--mono);font-size:.66rem;color:var(--text-secondary);margin-top:.2rem}
+.stat-card .sub a{color:inherit;text-decoration:underline}
+
+/* team logos (copied from nba-headshots at build time) */
+.lg{width:22px;height:22px;flex:0 0 auto;display:inline-block;vertical-align:middle;object-fit:contain}
+.lg-txt{border-radius:50%;background:var(--surface-hover);border:2px solid var(--c,var(--border));font-family:var(--mono);
+  font-size:.5rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;color:var(--text)}
+.hdr .lg-txt{font-size:.8rem}
+
+/* game rows: a card on phones, a single grid row from 860px */
+.games{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+.gm{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.7rem .8rem;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"when price" "match price" "meta meta" "buy buy";
+  gap:.15rem .8rem;scroll-margin-top:4rem}
+.gm:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.gm-when{grid-area:when;font-family:var(--mono);font-size:.7rem;color:var(--text-secondary);display:flex;gap:.5rem;flex-wrap:wrap}
+.gm-date{font-weight:600;color:var(--text)}
+.gm-match{grid-area:match;display:flex;flex-wrap:wrap;align-items:center;gap:.15rem .35rem;font-weight:600;font-size:.95rem;line-height:1.3;min-width:0}
+.gm-match a{color:var(--text)}
+.gm-match .at{font-weight:500;color:var(--text-secondary);font-size:.82rem}
+.gm-venue{flex-basis:100%;font-family:var(--mono);font-size:.66rem;font-weight:500;color:var(--text-secondary)}
+.gm-price{grid-area:price;text-align:right;align-self:start}
+.gm-price .p{display:block;font-family:var(--mono);font-size:1.3rem;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+.gm-price .p.none{font-size:.72rem;font-weight:600;color:var(--text-secondary);max-width:7rem;line-height:1.3}
+.gm-price .lbl{display:block;font-size:.56rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);font-weight:600}
+.gm-sub{display:block;font-family:var(--mono);font-size:.64rem;color:var(--text-secondary);white-space:nowrap}
+.gm-meta{grid-area:meta;display:flex;flex-wrap:wrap;align-items:center;gap:.2rem .6rem;font-size:.76rem;margin-top:.25rem}
+.gm-meta a{color:var(--text-secondary);text-decoration:underline;text-underline-offset:2px}
+.gm-buy{grid-area:buy;display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.45rem}
+.st{display:inline-block;font-family:var(--mono);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  padding:.08rem .4rem;border-radius:4px;background:var(--surface-hover);color:var(--text-secondary)}
+.st.ok{background:var(--green-dim);color:var(--green)}
+.st.bad{background:var(--red-dim);color:var(--red)}
+
+/* buy buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:var(--tap);padding:0 .9rem;border-radius:var(--radius-sm);
+  border:1px solid var(--border);background:var(--surface);color:var(--text);font-weight:600;font-size:.84rem;white-space:nowrap}
+.btn:hover{border-color:var(--accent);color:var(--accent-ink);text-decoration:none}
+.btn.primary{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.btn.primary:hover{background:#1e40af;color:#fff}
+.btn.link{border-color:transparent;background:transparent;color:var(--text-secondary);font-weight:500;padding:0 .4rem;text-decoration:underline}
+.gm-buy .btn{flex:1 1 auto}
+.gm-buy .btn.link{flex:0 0 auto}
+
+/* ranked rows (rankings, cheapest home game per team, visitors) */
+.rl{list-style:none;padding:0;margin:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.rl li{display:flex;align-items:center;gap:.6rem;padding:.55rem .75rem;border-bottom:1px solid var(--border-soft)}
+.rl li:last-child{border-bottom:0}
+.rl .rk{font-family:var(--mono);font-size:.72rem;color:var(--text-secondary);width:1.6rem;flex:0 0 auto;text-align:right}
+.rl .nm{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:.5rem}
+.rl .nm a{color:var(--text);font-weight:600}
+.rl .nm small{display:block;font-family:var(--mono);font-size:.64rem;color:var(--text-secondary);font-weight:500}
+.rl .nm small a{color:inherit;font-weight:500;text-decoration:underline}
+.rl .v{text-align:right;font-family:var(--mono);font-weight:700;font-size:.95rem;flex:0 0 auto}
+.rl .v small{display:block;font-size:.62rem;color:var(--text-secondary);font-weight:500}
+.rl .bar{height:4px;border-radius:999px;background:var(--surface-hover);margin-top:.3rem;overflow:hidden}
+.rl .bar span{display:block;height:100%;background:var(--accent)}
+.up{color:var(--red)}.down{color:var(--green)}
+
+/* grids of links */
+.egrid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+.ecard{display:flex;align-items:center;gap:.5rem;min-height:var(--tap);padding:.4rem .6rem;border:1px solid var(--border);
+  border-radius:10px;background:var(--surface);color:var(--text);font-weight:600;font-size:.84rem;line-height:1.25}
+.ecard:hover{border-color:var(--accent);text-decoration:none}
+.ecard small{display:block;font-family:var(--mono);font-size:.6rem;color:var(--text-secondary);font-weight:500}
+
+/* "remember my team" */
+.my-team{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem;margin:0 0 1.4rem}
+.my-team-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.my-team-bar label{font-weight:700;font-size:.9rem;margin-right:auto}
+.my-team select,.rt-form select,.rt-form input{font:inherit;font-size:16px;min-height:var(--tap);padding:0 .6rem;border:1px solid var(--border);
+  border-radius:var(--radius-sm);background:var(--surface);color:var(--text);max-width:100%}
+.my-team .note{font-size:.72rem;color:var(--text-secondary);margin-top:.35rem}
+.my-team-slot:empty{display:none}
+.my-team-slot{margin-top:.8rem}
+.my-team-card h3{font-size:.95rem;margin:0 0 .5rem;display:flex;align-items:center;gap:.4rem}
+.my-team-card h4{font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);margin:.8rem 0 .4rem;font-family:var(--mono)}
+.team-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;margin:0 0 1.4rem;font-size:.84rem}
+.team-actions .btn{flex:0 0 auto}
+
+/* concessions */
+.con{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin:.2rem 0 .6rem}
+.con div{background:var(--surface-hover);border-radius:var(--radius-sm);padding:.5rem .6rem}
+.con dt{font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);font-weight:600}
+.con dd{margin:0;font-family:var(--mono);font-weight:700}
+.fam{list-style:none;padding:0;margin:.3rem 0 0;font-size:.86rem}
+.fam li{display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px solid var(--border-soft)}
+.fam li.total{font-weight:700;border-bottom:0}
+.fam .mono{font-weight:600}
+
+/* road trip */
+.rt-form{display:grid;grid-template-columns:1fr 1fr;gap:.6rem .7rem;align-items:end}
+.rt-form label{display:flex;flex-direction:column;gap:.2rem;font-size:.72rem;font-weight:600;color:var(--text-secondary);
+  text-transform:uppercase;letter-spacing:.05em;min-width:0}
+.rt-form .wide{grid-column:1/-1}
+.rt-form button{grid-column:1/-1}
+.trip{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem;margin:0 0 .7rem}
+.trip-head{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;margin:0 0 .4rem}
+.trip-head h3{font-size:.95rem}
+.trip-total{font-family:var(--mono);font-size:1.25rem;font-weight:700}
+.trip ol{list-style:none;padding:0;margin:0}
+.trip li{padding:.45rem 0;border-top:1px solid var(--border-soft);font-size:.86rem;display:flex;gap:.6rem;justify-content:space-between;align-items:baseline}
+.trip .hop{font-family:var(--mono);font-size:.64rem;color:var(--text-secondary);display:block}
+.trip .price{font-family:var(--mono);font-weight:700;white-space:nowrap}
+.trip li a{font-weight:600;color:var(--text)}
+.rt-status{font-family:var(--mono);font-size:.74rem;color:var(--text-secondary);margin:.8rem 0}
+
+/* terms */
+.prose{max-width:44rem}
+.prose p{margin:0 0 .8rem;font-size:.92rem}
+
+/* footer */
+.foot{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.74rem;color:var(--text-secondary);line-height:1.7}
+.foot nav{display:flex;flex-wrap:wrap;gap:.2rem 1rem;font-family:var(--mono)}
+.foot nav a{color:var(--text-secondary);text-decoration:underline;min-height:32px;display:inline-flex;align-items:center}
+.foot p{margin:.4rem 0 0}
+
+@media(min-width:560px){
+  .stat-cards{grid-template-columns:repeat(4,1fr)}
+  .egrid{grid-template-columns:repeat(3,1fr)}
+  .con{grid-template-columns:repeat(5,1fr)}
+  .rt-form{grid-template-columns:repeat(3,1fr)}
+  .rt-form button{grid-column:auto}
+}
+@media(min-width:860px){
+  .container{padding:1.5rem 1.5rem 4rem}
+  .hdr h1{font-size:1.5rem}
+  .hdr .brand{display:inline}
+  .subtitle{font-size:.92rem}
+  .egrid{grid-template-columns:repeat(5,1fr)}
+  .gm{grid-template-columns:7.5rem minmax(0,1fr) 11rem minmax(9rem,auto);
+    grid-template-areas:"when match price buy" "when meta price buy";align-items:center;padding:.65rem .9rem}
+  .gm-when{flex-direction:column;gap:0;align-self:start}
+  .gm-buy{margin-top:0;justify-content:flex-end;flex-wrap:nowrap}
+  .gm-buy .btn{flex:0 0 auto}
+  .rt-form{grid-template-columns:repeat(6,1fr)}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem}
+}

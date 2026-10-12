@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import game_list, game_row, team_logo %}
+{% block intro %}<p class="subtitle">{{ copy.hub.intro }}</p>{% endblock %}
+{% block content %}
+
+{# Remember my team: the 30 per-team cards are prerendered in a <template>;
+   my-team.js copies the saved team's card into the slot while the page is
+   parsed, so nothing moves after paint. Nothing is fetched or sent. #}
+<section class="my-team" data-my-team-root aria-labelledby="my-team-h">
+<div class="my-team-bar">
+<label id="my-team-h" for="my-team-select">{{ copy.hub.my_team_label }}</label>
+<select id="my-team-select" data-my-team-select>
+<option value="">Pick a team</option>
+{% for t in teams %}<option value="{{ t.slug }}">{{ t.name }}</option>
+{% endfor %}
+</select>
+<button type="button" class="btn" data-my-team-clear>{{ copy.hub.my_team_clear }}</button>
+</div>
+<p class="note">{{ copy.hub.my_team_note }}</p>
+<div class="my-team-slot" data-my-team-slot></div>
+</section>
+<template id="my-team-cards">
+{% for t in teams %}
+{% set mt = my_team[t.code] %}
+<div class="my-team-card" data-team="{{ t.slug }}">
+<h3>{{ team_logo(t) }}<a href="{{ team_path(t) }}">{{ t.name }}</a></h3>
+{% if mt.cheapest %}
+<h4>Cheapest upcoming game</h4>
+<ol class="games">{{ game_row(mt.cheapest, t) }}</ol>
+{% endif %}
+{% if mt.next %}
+<h4>Next {{ mt.next|length }} games</h4>
+<ol class="games">{% for g in mt.next %}{{ game_row(g, t) }}{% endfor %}</ol>
+{% else %}
+<p class="empty">No games left this season.</p>
+{% endif %}
+</div>
+{% endfor %}
+</template>
+<script src="{{ asset('assets/my-team.js') }}"></script>
+
+<section class="block" id="week">
+<div class="block-head"><h2>{{ copy.hub.week_heading_first if st.week_is_first else copy.hub.week_heading }}</h2>
+{% if st.week_start %}<span class="sub">From {{ st.week_start|dshort }}</span>{% endif %}</div>
+{{ game_list(st.week, empty="No games with SeatGeek listings in the next seven days.") }}
+</section>
+
+<section class="block" id="cheapest-home">
+<div class="block-head"><h2>{{ copy.hub.cheapest_home_heading }}</h2><span class="sub">{{ copy.price_terms.get_in_long }}</span></div>
+<ol class="rl">
+{% for t in teams %}
+{% set g = st.teams[t.code].cheapest_home %}
+<li>
+<span class="nm">{{ team_logo(t, 28) }}<span><a href="{{ team_path(t) }}">{{ t.short_name }}</a>
+{% if g %}<small>vs <a href="{{ game_path(g) }}">{{ g.away.short_name }}</a> · {{ g.date|dshort }}</small>{% else %}<small>No home games with listings</small>{% endif %}</span></span>
+{% if g %}<span class="v">{{ g.price|money }}<small>{% if g.sg.median %}med {{ g.sg.median|money }} · {% endif %}{{ g.sg.listings }} listings</small></span>{% endif %}
+</li>
+{% endfor %}
+</ol>
+</section>
+
+<section class="block" id="ranking">
+<div class="block-head"><h2>{{ copy.hub.ranking_heading }}</h2></div>
+<p class="block-intro">{{ copy.hub.ranking_intro }}</p>
+{% if st.ranking %}
+{% set top = st.ranking[0].home_avg %}
+<ol class="rl">
+{% for s in st.ranking %}
+<li><span class="rk">{{ s.rank }}</span>
+<span class="nm">{{ team_logo(s.team, 28) }}<span style="flex:1"><a href="{{ team_path(s.team) }}">{{ s.team.short_name }}</a>
+<small>{{ s.team.arena }} · {{ s.home_priced }} home games</small>
+<span class="bar"><span style="width:{{ (100 * s.home_avg / top)|round(1) }}%"></span></span></span></span>
+<span class="v">{{ s.home_avg|money }}<small>avg get-in</small></span></li>
+{% endfor %}
+</ol>
+{% else %}<p class="empty">No home games with listings yet.</p>{% endif %}
+</section>
+
+<section class="block" id="premium">
+<div class="block-head"><h2>{{ copy.hub.premium_heading }}</h2></div>
+<p class="block-intro">{{ copy.hub.premium_intro }}</p>
+{% if st.premium %}
+<ol class="rl">
+{% for s in st.premium %}
+<li><span class="rk">{{ s.premium_rank }}</span>
+<span class="nm">{{ team_logo(s.team, 28) }}<span><a href="{{ team_path(s.team) }}">{{ s.team.short_name }}</a>
+<small>{{ s.premium_games }} road game{{ "s" if s.premium_games != 1 }}</small></span></span>
+<span class="v {{ 'up' if s.premium > 1.005 else ('down' if s.premium < 0.995 else '') }}">{{ s.premium|ratio }}<small>{{ s.premium|pct_diff }}</small></span></li>
+{% endfor %}
+</ol>
+{% else %}<p class="empty">No road games with listings yet.</p>{% endif %}
+</section>
+
+<section class="block" id="expensive">
+<div class="block-head"><h2>{{ copy.hub.expensive_heading }}</h2><span class="sub">By get-in price</span></div>
+{{ game_list(st.expensive, empty="No games with listings yet.") }}
+</section>
+
+<section class="block">
+<div class="block-head"><h2>{{ copy.hub.tools_heading }}</h2></div>
+<a class="btn primary" href="{{ site_path('road-trip/') }}">{{ copy.hub.road_trip_link }}</a>
+</section>
+
+<section class="block" id="teams">
+<div class="block-head"><h2>{{ copy.hub.teams_heading }}</h2></div>
+<ul class="egrid">
+{% for t in teams %}<li><a class="ecard" href="{{ team_path(t) }}">{{ team_logo(t, 28) }}<span>{{ t.short_name }}<small>{{ t.city }}</small></span></a></li>
+{% endfor %}
+</ul>
+</section>
+
+<section class="block" id="arenas">
+<div class="block-head"><h2>{{ copy.hub.arenas_heading }}</h2></div>
+<ul class="egrid">
+{% for t in arenas %}<li><a class="ecard" href="{{ arena_path(t) }}"><span>{{ t.arena }}<small>{{ t.short_name }} · {{ t.city }}</small></span></a></li>
+{% endfor %}
+</ul>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ asset('assets/tickets.js') }}" defer></script>{% endblock %}
