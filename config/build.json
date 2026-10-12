@@ -1,0 +1,14 @@
+{
+  "_note": "Build settings. season_start/season_end bound the regular season: SeatGeek events outside it (preseason, playoffs) are ignored. The build fails when SeatGeek returns fewer NBA regular-season games than min_events, scaled down as the season is played: the floor is min(min_events, min_ratio x games still to play). Games still to play are estimated from the Ticketmaster schedule (25 teams) scaled to 30 teams. Without the scaling a fixed 900 would fail every build from early December.",
+  "season_start": "2026-10-20",
+  "season_end": "2027-04-15",
+  "games_per_season": 1230,
+  "min_events": 900,
+  "min_ratio": 0.75,
+  "seatgeek_per_page": 100,
+  "seatgeek_max_pages": 30,
+  "week_days": 7,
+  "list_size": 10,
+  "logos_url": "https://raw.githubusercontent.com/jsierrahoopshype/nba-headshots/main/teams/logos/current/svg/{nba_id}.svg",
+  "no_tm_home_teams": ["CLE", "HOU", "MIN", "NOP", "UTA"]
+}

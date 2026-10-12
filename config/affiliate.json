@@ -1,0 +1,21 @@
+{
+  "_note": "Buy-link templates per vendor. While enabled is false the button uses the plain event URL. When you switch a vendor on, its template must contain {url} (the event URL, percent-encoded) and is usually the Impact tracking link, e.g. https://<brand>.pxf.io/c/<publisher-id>/<ad-id>/<campaign-id>?u={url}. The affiliate disclosure line appears on every page as soon as any vendor is enabled. stubhub has no event URL in our data, so its button is a search: search_url gets {query} (e.g. Lakers Grizzlies, percent-encoded) and the template, when enabled, wraps that search URL.",
+  "vendors": {
+    "seatgeek": {
+      "label": "SeatGeek",
+      "enabled": false,
+      "template": ""
+    },
+    "ticketmaster": {
+      "label": "Ticketmaster",
+      "enabled": false,
+      "template": ""
+    },
+    "stubhub": {
+      "label": "StubHub",
+      "enabled": false,
+      "template": "",
+      "search_url": "https://www.stubhub.com/search?q={query}"
+    }
+  }
+}

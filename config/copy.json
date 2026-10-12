@@ -1,0 +1,120 @@
+{
+  "_note": "All page wording lives here. Placeholders: {season} season label, {team} short name (Lakers), {full_team} full name, {arena}, {city}, {away}/{home} short names, {away_full}/{home_full} full names. Titles are cut to 60 characters and descriptions to 155. While launched is false every page carries noindex and sitemap.xml lists no URLs (page hashes and lastmod dates are still tracked, so they are right on launch day). Never say a price is the lowest anywhere: SeatGeek's lowest_price is 'the lowest listed on SeatGeek'.",
+  "launched": false,
+  "site_name": "HoopsMatic",
+  "season_label": "2026-27",
+  "privacy_url": "https://hoopsmatic.com/privacy",
+  "how_to_watch_url": "https://hoopsmatic.com/how-to-watch/{slug}",
+  "affiliate_disclosure": "HoopsMatic may earn a commission when you buy through links on this page.",
+  "seatgeek_attribution": "Prices by SeatGeek, updated {time}",
+  "price_terms": {
+    "get_in": "Get-in",
+    "get_in_long": "Lowest listed on SeatGeek",
+    "median": "Median",
+    "listings": "Listings",
+    "no_price": "No listings on SeatGeek",
+    "not_on_seatgeek": "Not on SeatGeek yet"
+  },
+  "status": {
+    "onsale": "On sale",
+    "offsale": "Off sale at Ticketmaster",
+    "soldout": "Sold out at Ticketmaster",
+    "cancelled": "Cancelled",
+    "postponed": "Postponed",
+    "rescheduled": "Rescheduled",
+    "no_tm": "SeatGeek only"
+  },
+  "tabs": {
+    "hub": "Tickets",
+    "teams": "Teams",
+    "arenas": "Arenas",
+    "road_trip": "Road trip"
+  },
+  "hub": {
+    "title": "NBA Tickets {season}: Cheapest Games & Prices",
+    "description": "Cheapest NBA games this week, every team's cheapest home game, arena price rankings and the road trips you can afford in {season}.",
+    "h1": "NBA tickets {season}",
+    "intro": "The get-in price for every NBA game: the lowest listed on SeatGeek, with the median price and how many listings there are beside it. Checked every three hours.",
+    "my_team_heading": "Your team",
+    "my_team_label": "Remember my team",
+    "my_team_clear": "Forget",
+    "my_team_note": "Saved on this device only.",
+    "week_heading": "Cheapest games this week",
+    "week_heading_first": "Cheapest games in the first week of the season",
+    "cheapest_home_heading": "Cheapest home game for every team",
+    "ranking_heading": "Most and least expensive arenas",
+    "ranking_intro": "Average get-in price across each team's remaining home games.",
+    "premium_heading": "Visitor premium index",
+    "premium_intro": "How much more (or less) a team's road games cost than the host's usual home game. For each road game we divide its get-in price by the host's average get-in price, then take the median across the team's road games. 1.25x means road games with this team cost 25% more than the host's average night.",
+    "expensive_heading": "Most expensive games of the season",
+    "teams_heading": "All 30 teams",
+    "arenas_heading": "All 30 arenas",
+    "tools_heading": "Plan a trip",
+    "road_trip_link": "Build a road trip of 2 to 4 games"
+  },
+  "team": {
+    "title": "{team} Tickets {season}: Cheapest Home & Road Games",
+    "description": "{full_team} tickets for {season}: the lowest price listed on SeatGeek for every game, plus the median, listings and where to buy.",
+    "h1": "{full_team} tickets",
+    "intro": "Every remaining {full_team} game with its get-in price on SeatGeek, the median listing and where to buy.",
+    "home_heading": "Home games at {arena}",
+    "road_heading": "Road games",
+    "cheapest_home": "Cheapest home game",
+    "cheapest_road": "Cheapest road game",
+    "rank_label": "Home price rank",
+    "rank_note": "of {n} by average get-in",
+    "premium_label": "Visitor premium",
+    "premium_note": "median road game vs. host's average",
+    "concessions_heading": "At {arena}",
+    "no_tm_note": "Ticketmaster doesn't sell {team} home games, so their home games show SeatGeek and StubHub only."
+  },
+  "arena": {
+    "title": "{arena} Tickets {season}: {team} Games & Prices",
+    "description": "{arena} tickets for {season}: every {team} home game with the lowest price listed on SeatGeek, the cheapest nights, parking and food.",
+    "h1": "{arena} tickets",
+    "intro": "Home of the {full_team} in {city}. Every remaining game here with its get-in price on SeatGeek.",
+    "cheapest_heading": "Cheapest nights",
+    "visitors_heading": "Which visitors cost more",
+    "visitors_intro": "Each visiting team's get-in price compared with the average get-in price for a game here ({avg}).",
+    "games_heading": "Every game at {arena}",
+    "concessions_heading": "Parking and food",
+    "family_heading": "Family of four",
+    "family_note": "4 get-in tickets for the cheapest game, plus parking, 2 beers, 2 sodas and 4 hot dogs.",
+    "family_missing": "The family-of-four estimate shows once we have checked parking and food prices at {arena}."
+  },
+  "matchup": {
+    "title": "{away} at {home} Tickets {season}: Prices & Dates",
+    "description": "{away} at {home} tickets for {season}: every game at {arena} with the lowest price listed on SeatGeek, the median and where to buy.",
+    "h1": "{away} at {home} tickets",
+    "intro": "The {away_full} visiting the {home_full} at {arena} this season.",
+    "none": "No more {away} at {home} games are scheduled this season.",
+    "reverse": "{home} at {away}",
+    "how_to_watch": "How to watch"
+  },
+  "road_trip": {
+    "title": "NBA Road Trip Planner {season}: Cheapest Game Trips",
+    "description": "Find 2 to 4 NBA games on back-to-back nights in nearby cities, ranked by total get-in price on SeatGeek, within your dates and budget.",
+    "h1": "NBA road trip planner",
+    "intro": "Pick how many days you have, when you can start and what you can spend. We look for 2 to 4 games on consecutive or nearly consecutive nights in cities close enough to drive or take a short flight, ranked by the total get-in price for one ticket per game."
+  },
+  "terms": {
+    "title": "Terms of Use: HoopsMatic NBA Tickets",
+    "description": "The terms for using the HoopsMatic NBA tickets pages.",
+    "h1": "Terms of use"
+  },
+  "concessions": {
+    "parking": "Parking",
+    "beer": "Beer",
+    "soda": "Soda",
+    "hot_dog": "Hot dog",
+    "water": "Water",
+    "not_available": "Parking and food prices at {arena} are not available yet.",
+    "checked": "Checked {date}",
+    "source": "Source"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "note": "Ticket prices change all the time. Check the final price, fees included, on the seller's site before you buy."
+  }
+}
