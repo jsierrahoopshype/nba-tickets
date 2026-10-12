@@ -1,0 +1,3198 @@
+{
+ "events": [
+  {
+   "type": "nba",
+   "id": 7000001,
+   "title": "Preseason: Celtics at Knicks",
+   "datetime_local": "2026-10-14T19:30:00",
+   "datetime_utc": "2026-10-14T23:30:00",
+   "venue": {
+    "name": "Madison Square Garden",
+    "city": "New York",
+    "state": "NY"
+   },
+   "performers": [
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Boston Celtics",
+     "short_name": "Celtics",
+     "slug": "boston-celtics",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 10,
+    "lowest_price": 30
+   },
+   "url": "https://seatgeek.com/fixture-preseason"
+  },
+  {
+   "type": "nba",
+   "id": 7100001,
+   "title": "Oklahoma City Thunder at Orlando Magic",
+   "short_title": "Thunder at Magic",
+   "datetime_local": "2026-10-20T19:30:00",
+   "datetime_utc": "2026-10-20T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Kia Center",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Oklahoma City Thunder",
+     "short_name": "Thunder",
+     "slug": "oklahoma-city-thunder",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Orlando Magic",
+     "short_name": "Magic",
+     "slug": "orlando-magic",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 849,
+    "visible_listing_count": 849,
+    "lowest_price": 138,
+    "median_price": 330,
+    "average_price": 291,
+    "highest_price": 2319
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-thunder-at-magic-tickets/2026-10-20/7100001"
+  },
+  {
+   "type": "nba",
+   "id": 7100002,
+   "title": "Los Angeles Lakers at Atlanta Hawks",
+   "short_title": "Lakers at Hawks",
+   "datetime_local": "2026-10-20T22:00:00",
+   "datetime_utc": "2026-10-21T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "State Farm Arena",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Atlanta Hawks",
+     "short_name": "Hawks",
+     "slug": "atlanta-hawks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Los Angeles Lakers",
+     "short_name": "Lakers",
+     "slug": "los-angeles-lakers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 547,
+    "visible_listing_count": 547,
+    "lowest_price": 96,
+    "median_price": 226,
+    "average_price": 203,
+    "highest_price": 3268
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-lakers-at-hawks-tickets/2026-10-20/7100002"
+  },
+  {
+   "type": "nba",
+   "id": 7100003,
+   "title": "San Antonio Spurs at Houston Rockets",
+   "short_title": "Spurs at Rockets",
+   "datetime_local": "2026-10-20T20:00:00",
+   "datetime_utc": "2026-10-21T01:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Toyota Center",
+    "city": "Houston",
+    "state": "TX",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "San Antonio Spurs",
+     "short_name": "Spurs",
+     "slug": "san-antonio-spurs",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Houston Rockets",
+     "short_name": "Rockets",
+     "slug": "houston-rockets",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 85,
+    "visible_listing_count": 85,
+    "lowest_price": 39,
+    "median_price": 86,
+    "average_price": 99,
+    "highest_price": 908
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-spurs-at-rockets-tickets/2026-10-20/7100003"
+  },
+  {
+   "type": "nba",
+   "id": 7100004,
+   "title": "Golden State Warriors at Portland Trail Blazers",
+   "short_title": "Warriors at Trail Blazers",
+   "datetime_local": "2026-10-20T22:00:00",
+   "datetime_utc": "2026-10-21T05:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Moda Center",
+    "city": "Portland",
+    "state": "OR",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Portland Trail Blazers",
+     "short_name": "Trail Blazers",
+     "slug": "portland-trail-blazers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Golden State Warriors",
+     "short_name": "Warriors",
+     "slug": "golden-state-warriors",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 495,
+    "visible_listing_count": 495,
+    "lowest_price": 90,
+    "median_price": 207,
+    "average_price": 264,
+    "highest_price": 1906
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-warriors-at-trail-blazers-tickets/2026-10-20/7100004"
+  },
+  {
+   "type": "parking",
+   "id": 7000002,
+   "title": "PARKING: Lakers vs. Suns",
+   "datetime_local": "2026-10-22T19:30:00",
+   "datetime_utc": "2026-10-23T02:30:00",
+   "venue": {
+    "name": "Lot 7",
+    "city": "Los Angeles",
+    "state": "CA"
+   },
+   "performers": [
+    {
+     "name": "Crypto.com Arena Parking",
+     "slug": "crypto-com-arena-parking"
+    }
+   ],
+   "stats": {
+    "listing_count": 40,
+    "lowest_price": 25
+   },
+   "url": "https://seatgeek.com/fixture-parking"
+  },
+  {
+   "type": "nba",
+   "id": 7100005,
+   "title": "Boston Celtics at Indiana Pacers",
+   "short_title": "Celtics at Pacers",
+   "datetime_local": "2026-10-20T19:30:00",
+   "datetime_utc": "2026-10-20T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Gainbridge Fieldhouse",
+    "city": "Indianapolis",
+    "state": "IN",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Boston Celtics",
+     "short_name": "Celtics",
+     "slug": "boston-celtics",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Indiana Pacers",
+     "short_name": "Pacers",
+     "slug": "indiana-pacers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 643,
+    "visible_listing_count": 643,
+    "lowest_price": 25,
+    "median_price": 41,
+    "average_price": 68,
+    "highest_price": 605
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-celtics-at-pacers-tickets/2026-10-20/7100005"
+  },
+  {
+   "type": "nba",
+   "id": 7100006,
+   "title": "Dallas Mavericks at Utah Jazz",
+   "short_title": "Mavericks at Jazz",
+   "datetime_local": "2026-10-20T19:30:00",
+   "datetime_utc": "2026-10-21T01:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Delta Center",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Utah Jazz",
+     "short_name": "Jazz",
+     "slug": "utah-jazz",
+     "type": "nba",
+     "primary": true
+    },
+    {
+     "name": "Dallas Mavericks",
+     "short_name": "Mavericks",
+     "slug": "dallas-mavericks",
+     "type": "nba",
+     "primary": true
+    }
+   ],
+   "stats": {
+    "listing_count": 106,
+    "visible_listing_count": 106,
+    "lowest_price": 42,
+    "median_price": 85,
+    "average_price": 114,
+    "highest_price": 1409
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-mavericks-at-jazz-tickets/2026-10-20/7100006"
+  },
+  {
+   "type": "nba",
+   "id": 7100007,
+   "title": "Charlotte Hornets at Denver Nuggets",
+   "short_title": "Hornets at Nuggets",
+   "datetime_local": "2026-10-20T20:00:00",
+   "datetime_utc": "2026-10-21T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Ball Arena",
+    "city": "Denver",
+    "state": "CO",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Charlotte Hornets",
+     "short_name": "Hornets",
+     "slug": "charlotte-hornets",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Denver Nuggets",
+     "short_name": "Nuggets",
+     "slug": "denver-nuggets",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 342,
+    "visible_listing_count": 342,
+    "lowest_price": 83,
+    "median_price": 182,
+    "average_price": 171,
+    "highest_price": 2072
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-hornets-at-nuggets-tickets/2026-10-20/7100007"
+  },
+  {
+   "type": "nba",
+   "id": 7100008,
+   "title": "Cleveland Cavaliers at New York Knicks",
+   "short_title": "Cavaliers at Knicks",
+   "datetime_local": "2026-10-20T19:30:00",
+   "datetime_utc": "2026-10-20T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Madison Square Garden",
+    "city": "New York",
+    "state": "NY",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Cleveland Cavaliers",
+     "short_name": "Cavaliers",
+     "slug": "cleveland-cavaliers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 390,
+    "visible_listing_count": 390,
+    "lowest_price": 74,
+    "median_price": 142,
+    "average_price": 182,
+    "highest_price": 2386
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-cavaliers-at-knicks-tickets/2026-10-20/7100008"
+  },
+  {
+   "type": "nba",
+   "id": 7100009,
+   "title": "Houston Rockets at Brooklyn Nets",
+   "short_title": "Rockets at Nets",
+   "datetime_local": "2026-10-21T19:00:00",
+   "datetime_utc": "2026-10-21T23:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Barclays Center",
+    "city": "Brooklyn",
+    "state": "NY",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Houston Rockets",
+     "short_name": "Rockets",
+     "slug": "houston-rockets",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Brooklyn Nets",
+     "short_name": "Nets",
+     "slug": "brooklyn-nets",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 90,
+    "visible_listing_count": 90,
+    "lowest_price": 80,
+    "median_price": 172,
+    "average_price": 167,
+    "highest_price": 2136
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-rockets-at-nets-tickets/2026-10-21/7100009"
+  },
+  {
+   "type": "nba",
+   "id": 7100010,
+   "title": "Detroit Pistons at Orlando Magic",
+   "short_title": "Pistons at Magic",
+   "datetime_local": "2026-10-21T22:00:00",
+   "datetime_utc": "2026-10-22T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Kia Center",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Orlando Magic",
+     "short_name": "Magic",
+     "slug": "orlando-magic",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Detroit Pistons",
+     "short_name": "Pistons",
+     "slug": "detroit-pistons",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 120,
+    "visible_listing_count": 120,
+    "lowest_price": 98,
+    "median_price": 199,
+    "average_price": 293,
+    "highest_price": 2766
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-pistons-at-magic-tickets/2026-10-21/7100010"
+  },
+  {
+   "type": "nba",
+   "id": 7100011,
+   "title": "Dallas Mavericks at Indiana Pacers",
+   "short_title": "Mavericks at Pacers",
+   "datetime_local": "2026-10-21T22:00:00",
+   "datetime_utc": "2026-10-22T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Gainbridge Fieldhouse",
+    "city": "Indianapolis",
+    "state": "IN",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Dallas Mavericks",
+     "short_name": "Mavericks",
+     "slug": "dallas-mavericks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Indiana Pacers",
+     "short_name": "Pacers",
+     "slug": "indiana-pacers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 337,
+    "visible_listing_count": 337,
+    "lowest_price": 39,
+    "median_price": 78,
+    "average_price": 82,
+    "highest_price": 1416
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-mavericks-at-pacers-tickets/2026-10-21/7100011"
+  },
+  {
+   "type": "nba",
+   "id": 7100012,
+   "title": "Boston Celtics at Portland Trail Blazers",
+   "short_title": "Celtics at Trail Blazers",
+   "datetime_local": "2026-10-21T20:00:00",
+   "datetime_utc": "2026-10-22T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Moda Center",
+    "city": "Portland",
+    "state": "OR",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Portland Trail Blazers",
+     "short_name": "Trail Blazers",
+     "slug": "portland-trail-blazers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Boston Celtics",
+     "short_name": "Celtics",
+     "slug": "boston-celtics",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 0,
+    "visible_listing_count": 0,
+    "lowest_price": null,
+    "median_price": null,
+    "average_price": null,
+    "highest_price": null
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-celtics-at-trail-blazers-tickets/2026-10-21/7100012"
+  },
+  {
+   "type": "nba",
+   "id": 7100013,
+   "title": "Washington Wizards at Golden State Warriors",
+   "short_title": "Wizards at Warriors",
+   "datetime_local": "2026-10-21T19:00:00",
+   "datetime_utc": "2026-10-22T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Chase Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Washington Wizards",
+     "short_name": "Wizards",
+     "slug": "washington-wizards",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Golden State Warriors",
+     "short_name": "Warriors",
+     "slug": "golden-state-warriors",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 521,
+    "visible_listing_count": 521,
+    "lowest_price": 24,
+    "median_price": 56,
+    "average_price": 50,
+    "highest_price": 637
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-wizards-at-warriors-tickets/2026-10-21/7100013"
+  },
+  {
+   "type": "nba",
+   "id": 7100014,
+   "title": "Los Angeles Lakers at San Antonio Spurs",
+   "short_title": "Lakers at Spurs",
+   "datetime_local": "2026-10-21T19:30:00",
+   "datetime_utc": "2026-10-22T00:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Frost Bank Center",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "San Antonio Spurs",
+     "short_name": "Spurs",
+     "slug": "san-antonio-spurs",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Los Angeles Lakers",
+     "short_name": "Lakers",
+     "slug": "los-angeles-lakers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 102,
+    "visible_listing_count": 102,
+    "lowest_price": 130,
+    "median_price": 303,
+    "average_price": 283,
+    "highest_price": 3076
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-lakers-at-spurs-tickets/2026-10-21/7100014"
+  },
+  {
+   "type": "nba",
+   "id": 7100015,
+   "title": "Miami Heat at New York Knicks",
+   "short_title": "Heat at Knicks",
+   "datetime_local": "2026-10-21T19:30:00",
+   "datetime_utc": "2026-10-21T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Madison Square Garden",
+    "city": "New York",
+    "state": "NY",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Miami Heat",
+     "short_name": "Heat",
+     "slug": "miami-heat",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 199,
+    "visible_listing_count": 199,
+    "lowest_price": 89,
+    "median_price": 158,
+    "average_price": 202,
+    "highest_price": 2507
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-heat-at-knicks-tickets/2026-10-21/7100015"
+  },
+  {
+   "type": "nba",
+   "id": 7100016,
+   "title": "Charlotte Hornets at Sacramento Kings",
+   "short_title": "Hornets at Kings",
+   "datetime_local": "2026-10-21T19:00:00",
+   "datetime_utc": "2026-10-22T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Golden 1 Center",
+    "city": "Sacramento",
+    "state": "CA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Sacramento Kings",
+     "short_name": "Kings",
+     "slug": "sacramento-kings",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Charlotte Hornets",
+     "short_name": "Hornets",
+     "slug": "charlotte-hornets",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 900,
+    "visible_listing_count": 900,
+    "lowest_price": 112,
+    "median_price": 183,
+    "average_price": 335,
+    "highest_price": 1803
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-hornets-at-kings-tickets/2026-10-21/7100016"
+  },
+  {
+   "type": "nba",
+   "id": 7100017,
+   "title": "LA Clippers at Miami Heat",
+   "short_title": "Clippers at Heat",
+   "datetime_local": "2026-10-22T19:30:00",
+   "datetime_utc": "2026-10-22T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Kaseya Center",
+    "city": "Miami",
+    "state": "FL",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Los Angeles Clippers",
+     "short_name": "Clippers",
+     "slug": "los-angeles-clippers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Miami Heat",
+     "short_name": "Heat",
+     "slug": "miami-heat",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 497,
+    "visible_listing_count": 497,
+    "lowest_price": 54,
+    "median_price": 126,
+    "average_price": 161,
+    "highest_price": 920
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-clippers-at-heat-tickets/2026-10-22/7100017"
+  },
+  {
+   "type": "nba",
+   "id": 7100018,
+   "title": "Sacramento Kings at Portland Trail Blazers",
+   "short_title": "Kings at Trail Blazers",
+   "datetime_local": "2026-10-22T22:00:00",
+   "datetime_utc": "2026-10-23T05:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Moda Center",
+    "city": "Portland",
+    "state": "OR",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Portland Trail Blazers",
+     "short_name": "Trail Blazers",
+     "slug": "portland-trail-blazers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Sacramento Kings",
+     "short_name": "Kings",
+     "slug": "sacramento-kings",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 153,
+    "visible_listing_count": 153,
+    "lowest_price": 74,
+    "median_price": 122,
+    "average_price": 184,
+    "highest_price": 2223
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-kings-at-trail-blazers-tickets/2026-10-22/7100018"
+  },
+  {
+   "type": "nba",
+   "id": 7100019,
+   "title": "Minnesota Timberwolves at Orlando Magic",
+   "short_title": "Timberwolves at Magic",
+   "datetime_local": "2026-10-22T20:00:00",
+   "datetime_utc": "2026-10-23T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Kia Center",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Minnesota Timberwolves",
+     "short_name": "Timberwolves",
+     "slug": "minnesota-timberwolves",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Orlando Magic",
+     "short_name": "Magic",
+     "slug": "orlando-magic",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 228,
+    "visible_listing_count": 228,
+    "lowest_price": 123,
+    "median_price": 209,
+    "average_price": 285,
+    "highest_price": 2896
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-timberwolves-at-magic-tickets/2026-10-22/7100019"
+  },
+  {
+   "type": "nba",
+   "id": 7100020,
+   "title": "Boston Celtics at Denver Nuggets",
+   "short_title": "Celtics at Nuggets",
+   "datetime_local": "2026-10-22T20:00:00",
+   "datetime_utc": "2026-10-23T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Ball Arena",
+    "city": "Denver",
+    "state": "CO",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Denver Nuggets",
+     "short_name": "Nuggets",
+     "slug": "denver-nuggets",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Boston Celtics",
+     "short_name": "Celtics",
+     "slug": "boston-celtics",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 380,
+    "visible_listing_count": 380,
+    "lowest_price": 71,
+    "median_price": 116,
+    "average_price": 151,
+    "highest_price": 2335
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-celtics-at-nuggets-tickets/2026-10-22/7100020"
+  },
+  {
+   "type": "nba",
+   "id": 7100021,
+   "title": "Milwaukee Bucks at New York Knicks",
+   "short_title": "Bucks at Knicks",
+   "datetime_local": "2026-10-22T20:00:00",
+   "datetime_utc": "2026-10-23T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Madison Square Garden",
+    "city": "New York",
+    "state": "NY",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Milwaukee Bucks",
+     "short_name": "Bucks",
+     "slug": "milwaukee-bucks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 130,
+    "visible_listing_count": 130,
+    "lowest_price": 97,
+    "median_price": 213,
+    "average_price": 220,
+    "highest_price": 1811
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-bucks-at-knicks-tickets/2026-10-22/7100021"
+  },
+  {
+   "type": "nba",
+   "id": 7100022,
+   "title": "Oklahoma City Thunder at Charlotte Hornets",
+   "short_title": "Thunder at Hornets",
+   "datetime_local": "2026-10-22T19:30:00",
+   "datetime_utc": "2026-10-22T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Spectrum Center",
+    "city": "Charlotte",
+    "state": "NC",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Charlotte Hornets",
+     "short_name": "Hornets",
+     "slug": "charlotte-hornets",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Oklahoma City Thunder",
+     "short_name": "Thunder",
+     "slug": "oklahoma-city-thunder",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 402,
+    "visible_listing_count": 402,
+    "lowest_price": 122,
+    "median_price": 243,
+    "average_price": 300,
+    "highest_price": 2918
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-thunder-at-hornets-tickets/2026-10-22/7100022"
+  },
+  {
+   "type": "nba",
+   "id": 7100023,
+   "title": "Cleveland Cavaliers at Indiana Pacers",
+   "short_title": "Cavaliers at Pacers",
+   "datetime_local": "2026-10-23T19:00:00",
+   "datetime_utc": "2026-10-23T23:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Gainbridge Fieldhouse",
+    "city": "Indianapolis",
+    "state": "IN",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Cleveland Cavaliers",
+     "short_name": "Cavaliers",
+     "slug": "cleveland-cavaliers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Indiana Pacers",
+     "short_name": "Pacers",
+     "slug": "indiana-pacers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 562,
+    "visible_listing_count": 562,
+    "lowest_price": 20,
+    "median_price": 34,
+    "average_price": 55,
+    "highest_price": 638
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-cavaliers-at-pacers-tickets/2026-10-23/7100023"
+  },
+  {
+   "type": "nba",
+   "id": 7100024,
+   "title": "Phoenix Suns at Atlanta Hawks",
+   "short_title": "Suns at Hawks",
+   "datetime_local": "2026-10-23T22:00:00",
+   "datetime_utc": "2026-10-24T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "State Farm Arena",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Atlanta Hawks",
+     "short_name": "Hawks",
+     "slug": "atlanta-hawks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Phoenix Suns",
+     "short_name": "Suns",
+     "slug": "phoenix-suns",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 792,
+    "visible_listing_count": 792,
+    "lowest_price": 78,
+    "median_price": 158,
+    "average_price": 190,
+    "highest_price": 2585
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-suns-at-hawks-tickets/2026-10-23/7100024"
+  },
+  {
+   "type": "nba",
+   "id": 7100025,
+   "title": "Washington Wizards at New York Knicks",
+   "short_title": "Wizards at Knicks",
+   "datetime_local": "2026-10-23T19:30:00",
+   "datetime_utc": "2026-10-23T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Madison Square Garden",
+    "city": "New York",
+    "state": "NY",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Washington Wizards",
+     "short_name": "Wizards",
+     "slug": "washington-wizards",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 522,
+    "visible_listing_count": 522,
+    "lowest_price": 59,
+    "median_price": 105,
+    "average_price": 123,
+    "highest_price": 2325
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-wizards-at-knicks-tickets/2026-10-23/7100025"
+  },
+  {
+   "type": "nba",
+   "id": 7100026,
+   "title": "Detroit Pistons at Denver Nuggets",
+   "short_title": "Pistons at Nuggets",
+   "datetime_local": "2026-10-23T19:30:00",
+   "datetime_utc": "2026-10-24T01:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Ball Arena",
+    "city": "Denver",
+    "state": "CO",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Denver Nuggets",
+     "short_name": "Nuggets",
+     "slug": "denver-nuggets",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Detroit Pistons",
+     "short_name": "Pistons",
+     "slug": "detroit-pistons",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 303,
+    "visible_listing_count": 303,
+    "lowest_price": 53,
+    "median_price": 117,
+    "average_price": 122,
+    "highest_price": 921
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-pistons-at-nuggets-tickets/2026-10-23/7100026"
+  },
+  {
+   "type": "nba",
+   "id": 7100027,
+   "title": "Utah Jazz at LA Clippers",
+   "short_title": "Jazz at Clippers",
+   "datetime_local": "2026-10-23T20:00:00",
+   "datetime_utc": "2026-10-24T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Intuit Dome",
+    "city": "Inglewood",
+    "state": "CA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Utah Jazz",
+     "short_name": "Jazz",
+     "slug": "utah-jazz",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Los Angeles Clippers",
+     "short_name": "Clippers",
+     "slug": "los-angeles-clippers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 376,
+    "visible_listing_count": 376,
+    "lowest_price": 81,
+    "median_price": 130,
+    "average_price": 215,
+    "highest_price": 2669
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-jazz-at-clippers-tickets/2026-10-23/7100027"
+  },
+  {
+   "type": "nba",
+   "id": 7100028,
+   "title": "Minnesota Timberwolves at Memphis Grizzlies",
+   "short_title": "Timberwolves at Grizzlies",
+   "datetime_local": "2026-10-23T19:00:00",
+   "datetime_utc": "2026-10-24T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "FedExForum",
+    "city": "Memphis",
+    "state": "TN",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Memphis Grizzlies",
+     "short_name": "Grizzlies",
+     "slug": "memphis-grizzlies",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Minnesota Timberwolves",
+     "short_name": "Timberwolves",
+     "slug": "minnesota-timberwolves",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 773,
+    "visible_listing_count": 773,
+    "lowest_price": 127,
+    "median_price": 251,
+    "average_price": 288,
+    "highest_price": 4886
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-timberwolves-at-grizzlies-tickets/2026-10-23/7100028"
+  },
+  {
+   "type": "nba",
+   "id": 7100029,
+   "title": "Sacramento Kings at San Antonio Spurs",
+   "short_title": "Kings at Spurs",
+   "datetime_local": "2026-10-23T22:00:00",
+   "datetime_utc": "2026-10-24T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Frost Bank Center",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Sacramento Kings",
+     "short_name": "Kings",
+     "slug": "sacramento-kings",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "San Antonio Spurs",
+     "short_name": "Spurs",
+     "slug": "san-antonio-spurs",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 631,
+    "visible_listing_count": 631,
+    "lowest_price": 129,
+    "median_price": 225,
+    "average_price": 309,
+    "highest_price": 2745
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-kings-at-spurs-tickets/2026-10-23/7100029"
+  },
+  {
+   "type": "nba",
+   "id": 7100030,
+   "title": "New York Knicks at Memphis Grizzlies",
+   "short_title": "Knicks at Grizzlies",
+   "datetime_local": "2026-10-24T22:00:00",
+   "datetime_utc": "2026-10-25T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "FedExForum",
+    "city": "Memphis",
+    "state": "TN",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Memphis Grizzlies",
+     "short_name": "Grizzlies",
+     "slug": "memphis-grizzlies",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 528,
+    "visible_listing_count": 528,
+    "lowest_price": 108,
+    "median_price": 212,
+    "average_price": 247,
+    "highest_price": 2390
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-knicks-at-grizzlies-tickets/2026-10-24/7100030"
+  },
+  {
+   "type": "nba",
+   "id": 7100031,
+   "title": "Atlanta Hawks at Golden State Warriors",
+   "short_title": "Hawks at Warriors",
+   "datetime_local": "2026-10-24T22:00:00",
+   "datetime_utc": "2026-10-25T05:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Chase Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Atlanta Hawks",
+     "short_name": "Hawks",
+     "slug": "atlanta-hawks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Golden State Warriors",
+     "short_name": "Warriors",
+     "slug": "golden-state-warriors",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 870,
+    "visible_listing_count": 870,
+    "lowest_price": 18,
+    "median_price": 40,
+    "average_price": 51,
+    "highest_price": 495
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-hawks-at-warriors-tickets/2026-10-24/7100031"
+  },
+  {
+   "type": "nba",
+   "id": 7100032,
+   "title": "Atlanta Hawks at Golden State Warriors",
+   "short_title": "Hawks at Warriors",
+   "datetime_local": "2026-10-24T22:00:00",
+   "datetime_utc": "2026-10-25T05:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Chase Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Atlanta Hawks",
+     "short_name": "Hawks",
+     "slug": "atlanta-hawks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Golden State Warriors",
+     "short_name": "Warriors",
+     "slug": "golden-state-warriors",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 870,
+    "visible_listing_count": 870,
+    "lowest_price": 18,
+    "median_price": 40,
+    "average_price": 51,
+    "highest_price": 495
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-hawks-at-warriors-tickets/2026-10-24/7100031"
+  },
+  {
+   "type": "nba",
+   "id": 7100033,
+   "title": "LA Clippers at Portland Trail Blazers",
+   "short_title": "Clippers at Trail Blazers",
+   "datetime_local": "2026-10-24T22:00:00",
+   "datetime_utc": "2026-10-25T05:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Moda Center",
+    "city": "Portland",
+    "state": "OR",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Portland Trail Blazers",
+     "short_name": "Trail Blazers",
+     "slug": "portland-trail-blazers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Los Angeles Clippers",
+     "short_name": "Clippers",
+     "slug": "los-angeles-clippers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 631,
+    "visible_listing_count": 631,
+    "lowest_price": 80,
+    "median_price": 190,
+    "average_price": 238,
+    "highest_price": 2637
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-clippers-at-trail-blazers-tickets/2026-10-24/7100033"
+  },
+  {
+   "type": "nba",
+   "id": 7100034,
+   "title": "Toronto Raptors at New Orleans Pelicans",
+   "short_title": "Raptors at Pelicans",
+   "datetime_local": "2026-10-24T20:00:00",
+   "datetime_utc": "2026-10-25T01:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Smoothie King Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Toronto Raptors",
+     "short_name": "Raptors",
+     "slug": "toronto-raptors",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "New Orleans Pelicans",
+     "short_name": "Pelicans",
+     "slug": "new-orleans-pelicans",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 776,
+    "visible_listing_count": 776,
+    "lowest_price": 67,
+    "median_price": 122,
+    "average_price": 189,
+    "highest_price": 1065
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-raptors-at-pelicans-tickets/2026-10-24/7100034"
+  },
+  {
+   "type": "nba",
+   "id": 7100035,
+   "title": "Dallas Mavericks at Detroit Pistons",
+   "short_title": "Mavericks at Pistons",
+   "datetime_local": "2026-10-24T19:30:00",
+   "datetime_utc": "2026-10-24T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Little Caesars Arena",
+    "city": "Detroit",
+    "state": "MI",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Detroit Pistons",
+     "short_name": "Pistons",
+     "slug": "detroit-pistons",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Dallas Mavericks",
+     "short_name": "Mavericks",
+     "slug": "dallas-mavericks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 877,
+    "visible_listing_count": 877,
+    "lowest_price": 32,
+    "median_price": 74,
+    "average_price": 73,
+    "highest_price": 684
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-mavericks-at-pistons-tickets/2026-10-24/7100035"
+  },
+  {
+   "type": "nba",
+   "id": 7100036,
+   "title": "Philadelphia 76ers at Utah Jazz",
+   "short_title": "76ers at Jazz",
+   "datetime_local": "2026-10-24T19:00:00",
+   "datetime_utc": "2026-10-25T01:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Delta Center",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Philadelphia 76ers",
+     "short_name": "76ers",
+     "slug": "philadelphia-76ers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Utah Jazz",
+     "short_name": "Jazz",
+     "slug": "utah-jazz",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 77,
+    "visible_listing_count": 77,
+    "lowest_price": 54,
+    "median_price": 93,
+    "average_price": 140,
+    "highest_price": 1111
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-76ers-at-jazz-tickets/2026-10-24/7100036"
+  },
+  {
+   "type": "nba",
+   "id": 7100037,
+   "title": "Washington Wizards at Houston Rockets",
+   "short_title": "Wizards at Rockets",
+   "datetime_local": "2026-10-24T22:00:00",
+   "datetime_utc": "2026-10-25T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Toyota Center",
+    "city": "Houston",
+    "state": "TX",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Houston Rockets",
+     "short_name": "Rockets",
+     "slug": "houston-rockets",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Washington Wizards",
+     "short_name": "Wizards",
+     "slug": "washington-wizards",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 480,
+    "visible_listing_count": 480,
+    "lowest_price": 56,
+    "median_price": 127,
+    "average_price": 118,
+    "highest_price": 1521
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-wizards-at-rockets-tickets/2026-10-24/7100037"
+  },
+  {
+   "type": "nba",
+   "id": 7100038,
+   "title": "Oklahoma City Thunder at Phoenix Suns",
+   "short_title": "Thunder at Suns",
+   "datetime_local": "2026-10-24T22:00:00",
+   "datetime_utc": "2026-10-25T05:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Mortgage Matchup Center",
+    "city": "Phoenix",
+    "state": "AZ",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Oklahoma City Thunder",
+     "short_name": "Thunder",
+     "slug": "oklahoma-city-thunder",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Phoenix Suns",
+     "short_name": "Suns",
+     "slug": "phoenix-suns",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 880,
+    "visible_listing_count": 880,
+    "lowest_price": 150,
+    "median_price": 241,
+    "average_price": 323,
+    "highest_price": 2853
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-thunder-at-suns-tickets/2026-10-24/7100038"
+  },
+  {
+   "type": "nba",
+   "id": 7100039,
+   "title": "Chicago Bulls at Boston Celtics",
+   "short_title": "Bulls at Celtics",
+   "datetime_local": "2026-10-25T19:00:00",
+   "datetime_utc": "2026-10-25T23:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "TD Garden",
+    "city": "Boston",
+    "state": "MA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Boston Celtics",
+     "short_name": "Celtics",
+     "slug": "boston-celtics",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Chicago Bulls",
+     "short_name": "Bulls",
+     "slug": "chicago-bulls",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 219,
+    "visible_listing_count": 219,
+    "lowest_price": 99,
+    "median_price": 159,
+    "average_price": 217,
+    "highest_price": 2810
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-bulls-at-celtics-tickets/2026-10-25/7100039"
+  },
+  {
+   "type": "nba",
+   "id": 7100040,
+   "title": "Brooklyn Nets at Dallas Mavericks",
+   "short_title": "Nets at Mavericks",
+   "datetime_local": "2026-10-25T20:00:00",
+   "datetime_utc": "2026-10-26T01:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "American Airlines Center",
+    "city": "Dallas",
+    "state": "TX",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Brooklyn Nets",
+     "short_name": "Nets",
+     "slug": "brooklyn-nets",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Dallas Mavericks",
+     "short_name": "Mavericks",
+     "slug": "dallas-mavericks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 413,
+    "visible_listing_count": 413,
+    "lowest_price": 21,
+    "median_price": 41,
+    "average_price": 45,
+    "highest_price": 342
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-nets-at-mavericks-tickets/2026-10-25/7100040"
+  },
+  {
+   "type": "nba",
+   "id": 7100041,
+   "title": "Sacramento Kings at New York Knicks",
+   "short_title": "Kings at Knicks",
+   "datetime_local": "2026-10-25T22:00:00",
+   "datetime_utc": "2026-10-26T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Madison Square Garden",
+    "city": "New York",
+    "state": "NY",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Sacramento Kings",
+     "short_name": "Kings",
+     "slug": "sacramento-kings",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 176,
+    "visible_listing_count": 176,
+    "lowest_price": 68,
+    "median_price": 158,
+    "average_price": 172,
+    "highest_price": 2678
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-kings-at-knicks-tickets/2026-10-25/7100041"
+  },
+  {
+   "type": "nba",
+   "id": 7100042,
+   "title": "Detroit Pistons at New Orleans Pelicans",
+   "short_title": "Pistons at Pelicans",
+   "datetime_local": "2026-10-25T19:00:00",
+   "datetime_utc": "2026-10-26T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Smoothie King Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Detroit Pistons",
+     "short_name": "Pistons",
+     "slug": "detroit-pistons",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "New Orleans Pelicans",
+     "short_name": "Pelicans",
+     "slug": "new-orleans-pelicans",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 843,
+    "visible_listing_count": 843,
+    "lowest_price": 64,
+    "median_price": 123,
+    "average_price": 161,
+    "highest_price": 2413
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-pistons-at-pelicans-tickets/2026-10-25/7100042"
+  },
+  {
+   "type": "nba",
+   "id": 7100043,
+   "title": "Philadelphia 76ers at Cleveland Cavaliers",
+   "short_title": "76ers at Cavaliers",
+   "datetime_local": "2026-10-25T22:00:00",
+   "datetime_utc": "2026-10-26T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Rocket Arena",
+    "city": "Cleveland",
+    "state": "OH",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Cleveland Cavaliers",
+     "short_name": "Cavaliers",
+     "slug": "cleveland-cavaliers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Philadelphia 76ers",
+     "short_name": "76ers",
+     "slug": "philadelphia-76ers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 426,
+    "visible_listing_count": 426,
+    "lowest_price": 82,
+    "median_price": 154,
+    "average_price": 229,
+    "highest_price": 1443
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-76ers-at-cavaliers-tickets/2026-10-25/7100043"
+  },
+  {
+   "type": "nba",
+   "id": 7100044,
+   "title": "Milwaukee Bucks at Phoenix Suns",
+   "short_title": "Bucks at Suns",
+   "datetime_local": "2026-10-25T20:00:00",
+   "datetime_utc": "2026-10-26T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Mortgage Matchup Center",
+    "city": "Phoenix",
+    "state": "AZ",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Milwaukee Bucks",
+     "short_name": "Bucks",
+     "slug": "milwaukee-bucks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Phoenix Suns",
+     "short_name": "Suns",
+     "slug": "phoenix-suns",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 406,
+    "visible_listing_count": 406,
+    "lowest_price": 109,
+    "median_price": 201,
+    "average_price": 265,
+    "highest_price": 4230
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-bucks-at-suns-tickets/2026-10-25/7100044"
+  },
+  {
+   "type": "nba",
+   "id": 7100045,
+   "title": "Atlanta Hawks at San Antonio Spurs",
+   "short_title": "Hawks at Spurs",
+   "datetime_local": "2026-10-25T19:00:00",
+   "datetime_utc": "2026-10-26T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Frost Bank Center",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "San Antonio Spurs",
+     "short_name": "Spurs",
+     "slug": "san-antonio-spurs",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Atlanta Hawks",
+     "short_name": "Hawks",
+     "slug": "atlanta-hawks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 711,
+    "visible_listing_count": 711,
+    "lowest_price": 81,
+    "median_price": 158,
+    "average_price": 166,
+    "highest_price": 3030
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-hawks-at-spurs-tickets/2026-10-25/7100045"
+  },
+  {
+   "type": "nba",
+   "id": 7100046,
+   "title": "Miami Heat at Phoenix Suns",
+   "short_title": "Heat at Suns",
+   "datetime_local": "2026-10-26T20:00:00",
+   "datetime_utc": "2026-10-27T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Mortgage Matchup Center",
+    "city": "Phoenix",
+    "state": "AZ",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Miami Heat",
+     "short_name": "Heat",
+     "slug": "miami-heat",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Phoenix Suns",
+     "short_name": "Suns",
+     "slug": "phoenix-suns",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 663,
+    "visible_listing_count": 663,
+    "lowest_price": 118,
+    "median_price": 226,
+    "average_price": 244,
+    "highest_price": 2850
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-heat-at-suns-tickets/2026-10-26/7100046"
+  },
+  {
+   "type": "nba",
+   "id": 7100047,
+   "title": "Golden State Warriors at New Orleans Pelicans",
+   "short_title": "Warriors at Pelicans",
+   "datetime_local": "2026-10-26T19:00:00",
+   "datetime_utc": "2026-10-27T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Smoothie King Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "New Orleans Pelicans",
+     "short_name": "Pelicans",
+     "slug": "new-orleans-pelicans",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Golden State Warriors",
+     "short_name": "Warriors",
+     "slug": "golden-state-warriors",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 42,
+    "visible_listing_count": 42,
+    "lowest_price": 56,
+    "median_price": 95,
+    "average_price": 139,
+    "highest_price": 1464
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-warriors-at-pelicans-tickets/2026-10-26/7100047"
+  },
+  {
+   "type": "nba",
+   "id": 7100048,
+   "title": "Utah Jazz at Atlanta Hawks",
+   "short_title": "Jazz at Hawks",
+   "datetime_local": "2026-10-26T19:30:00",
+   "datetime_utc": "2026-10-26T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "State Farm Arena",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Utah Jazz",
+     "short_name": "Jazz",
+     "slug": "utah-jazz",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Atlanta Hawks",
+     "short_name": "Hawks",
+     "slug": "atlanta-hawks",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 416,
+    "visible_listing_count": 416,
+    "lowest_price": 82,
+    "median_price": 166,
+    "average_price": 190,
+    "highest_price": 2476
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-jazz-at-hawks-tickets/2026-10-26/7100048"
+  },
+  {
+   "type": "nba",
+   "id": 7100049,
+   "title": "Brooklyn Nets at Indiana Pacers",
+   "short_title": "Nets at Pacers",
+   "datetime_local": "2026-10-26T19:30:00",
+   "datetime_utc": "2026-10-26T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Gainbridge Fieldhouse",
+    "city": "Indianapolis",
+    "state": "IN",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Indiana Pacers",
+     "short_name": "Pacers",
+     "slug": "indiana-pacers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Brooklyn Nets",
+     "short_name": "Nets",
+     "slug": "brooklyn-nets",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 257,
+    "visible_listing_count": 257,
+    "lowest_price": 25,
+    "median_price": 45,
+    "average_price": 71,
+    "highest_price": 985
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-nets-at-pacers-tickets/2026-10-26/7100049"
+  },
+  {
+   "type": "nba",
+   "id": 7100050,
+   "title": "Oklahoma City Thunder at Chicago Bulls",
+   "short_title": "Thunder at Bulls",
+   "datetime_local": "2026-10-26T19:30:00",
+   "datetime_utc": "2026-10-27T00:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "United Center",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Oklahoma City Thunder",
+     "short_name": "Thunder",
+     "slug": "oklahoma-city-thunder",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Chicago Bulls",
+     "short_name": "Bulls",
+     "slug": "chicago-bulls",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 235,
+    "visible_listing_count": 235,
+    "lowest_price": 45,
+    "median_price": 105,
+    "average_price": 111,
+    "highest_price": 1004
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-thunder-at-bulls-tickets/2026-10-26/7100050"
+  },
+  {
+   "type": "nba",
+   "id": 7100051,
+   "title": "Denver Nuggets at Cleveland Cavaliers",
+   "short_title": "Nuggets at Cavaliers",
+   "datetime_local": "2026-10-26T22:00:00",
+   "datetime_utc": "2026-10-27T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Rocket Arena",
+    "city": "Cleveland",
+    "state": "OH",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Cleveland Cavaliers",
+     "short_name": "Cavaliers",
+     "slug": "cleveland-cavaliers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Denver Nuggets",
+     "short_name": "Nuggets",
+     "slug": "denver-nuggets",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 229,
+    "visible_listing_count": 229,
+    "lowest_price": 50,
+    "median_price": 112,
+    "average_price": 148,
+    "highest_price": 1420
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-nuggets-at-cavaliers-tickets/2026-10-26/7100051"
+  },
+  {
+   "type": "nba",
+   "id": 7100052,
+   "title": "Los Angeles Lakers at LA Clippers",
+   "short_title": "Lakers at Clippers",
+   "datetime_local": "2026-10-26T20:00:00",
+   "datetime_utc": "2026-10-27T03:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Intuit Dome",
+    "city": "Inglewood",
+    "state": "CA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Los Angeles Lakers",
+     "short_name": "Lakers",
+     "slug": "los-angeles-lakers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Los Angeles Clippers",
+     "short_name": "Clippers",
+     "slug": "los-angeles-clippers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 641,
+    "visible_listing_count": 641,
+    "lowest_price": 81,
+    "median_price": 163,
+    "average_price": 208,
+    "highest_price": 2374
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-lakers-at-clippers-tickets/2026-10-26/7100052"
+  },
+  {
+   "type": "nba",
+   "id": 7100053,
+   "title": "Denver Nuggets at Los Angeles Lakers",
+   "short_title": "Nuggets at Lakers",
+   "datetime_local": "2026-10-27T19:30:00",
+   "datetime_utc": "2026-10-28T02:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Crypto.com Arena",
+    "city": "Los Angeles",
+    "state": "CA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Los Angeles Lakers",
+     "short_name": "Lakers",
+     "slug": "los-angeles-lakers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Denver Nuggets",
+     "short_name": "Nuggets",
+     "slug": "denver-nuggets",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 758,
+    "visible_listing_count": 758,
+    "lowest_price": 82,
+    "median_price": 154,
+    "average_price": 207,
+    "highest_price": 3031
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-nuggets-at-lakers-tickets/2026-10-27/7100053"
+  },
+  {
+   "type": "nba",
+   "id": 7100054,
+   "title": "LA Clippers at Orlando Magic",
+   "short_title": "Clippers at Magic",
+   "datetime_local": "2026-10-27T20:00:00",
+   "datetime_utc": "2026-10-28T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Kia Center",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Los Angeles Clippers",
+     "short_name": "Clippers",
+     "slug": "los-angeles-clippers",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Orlando Magic",
+     "short_name": "Magic",
+     "slug": "orlando-magic",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 457,
+    "visible_listing_count": 457,
+    "lowest_price": 76,
+    "median_price": 134,
+    "average_price": 214,
+    "highest_price": 1473
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-clippers-at-magic-tickets/2026-10-27/7100054"
+  },
+  {
+   "type": "nba",
+   "id": 7100055,
+   "title": "Utah Jazz at Washington Wizards",
+   "short_title": "Jazz at Wizards",
+   "datetime_local": "2026-10-27T19:30:00",
+   "datetime_utc": "2026-10-27T23:30:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Capital One Arena",
+    "city": "Washington",
+    "state": "DC",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Washington Wizards",
+     "short_name": "Wizards",
+     "slug": "washington-wizards",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "Utah Jazz",
+     "short_name": "Jazz",
+     "slug": "utah-jazz",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 581,
+    "visible_listing_count": 581,
+    "lowest_price": 44,
+    "median_price": 71,
+    "average_price": 116,
+    "highest_price": 1037
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-jazz-at-wizards-tickets/2026-10-27/7100055"
+  },
+  {
+   "type": "nba",
+   "id": 7100056,
+   "title": "Dallas Mavericks at Miami Heat",
+   "short_title": "Mavericks at Heat",
+   "datetime_local": "2026-10-27T22:00:00",
+   "datetime_utc": "2026-10-28T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Kaseya Center",
+    "city": "Miami",
+    "state": "FL",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Dallas Mavericks",
+     "short_name": "Mavericks",
+     "slug": "dallas-mavericks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "Miami Heat",
+     "short_name": "Heat",
+     "slug": "miami-heat",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 898,
+    "visible_listing_count": 898,
+    "lowest_price": 83,
+    "median_price": 165,
+    "average_price": 249,
+    "highest_price": 2332
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-mavericks-at-heat-tickets/2026-10-27/7100056"
+  },
+  {
+   "type": "nba",
+   "id": 7100057,
+   "title": "New York Knicks at Cleveland Cavaliers",
+   "short_title": "Knicks at Cavaliers",
+   "datetime_local": "2026-10-27T22:00:00",
+   "datetime_utc": "2026-10-28T02:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Rocket Arena",
+    "city": "Cleveland",
+    "state": "OH",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Cleveland Cavaliers",
+     "short_name": "Cavaliers",
+     "slug": "cleveland-cavaliers",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    },
+    {
+     "name": "New York Knicks",
+     "short_name": "Knicks",
+     "slug": "new-york-knicks",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 427,
+    "visible_listing_count": 427,
+    "lowest_price": 71,
+    "median_price": 152,
+    "average_price": 205,
+    "highest_price": 1900
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-knicks-at-cavaliers-tickets/2026-10-27/7100057"
+  },
+  {
+   "type": "nba",
+   "id": 7100058,
+   "title": "Memphis Grizzlies at New Orleans Pelicans",
+   "short_title": "Grizzlies at Pelicans",
+   "datetime_local": "2026-10-27T19:00:00",
+   "datetime_utc": "2026-10-28T00:00:00",
+   "datetime_tbd": false,
+   "time_tbd": false,
+   "venue": {
+    "name": "Smoothie King Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "country": "US"
+   },
+   "performers": [
+    {
+     "name": "Memphis Grizzlies",
+     "short_name": "Grizzlies",
+     "slug": "memphis-grizzlies",
+     "type": "nba",
+     "primary": true,
+     "away_team": true
+    },
+    {
+     "name": "New Orleans Pelicans",
+     "short_name": "Pelicans",
+     "slug": "new-orleans-pelicans",
+     "type": "nba",
+     "primary": true,
+     "home_team": true
+    }
+   ],
+   "stats": {
+    "listing_count": 799,
+    "visible_listing_count": 799,
+    "lowest_price": 79,
+    "median_price": 158,
+    "average_price": 161,
+    "highest_price": 2057
+   },
+   "taxonomies": [
+    {
+     "name": "sports"
+    },
+    {
+     "name": "basketball"
+    },
+    {
+     "name": "nba"
+    }
+   ],
+   "url": "https://seatgeek.com/fixture-grizzlies-at-pelicans-tickets/2026-10-27/7100058"
+  }
+ ],
+ "meta": {
+  "total": 110,
+  "per_page": 60,
+  "page": 1,
+  "took": 3
+ }
+}
