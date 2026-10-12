@@ -17,7 +17,7 @@ from pathlib import Path
 from . import config, report
 from .build import BuildError, build
 from .merge import load_tm
-from .seatgeek import SeatGeekError, fetch_events, load_fixture
+from .seatgeek import SeatGeekError, diagnose, fetch_event_stats, fetch_events, load_fixture
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -52,9 +52,15 @@ def main(argv: list[str] | None = None) -> int:
             if not args.data_dir:
                 print("build: --data-dir (checkout of nba-tickets-data) is required for a live build", file=sys.stderr)
                 return 2
-            sg_raw = fetch_events(os.environ.get("SEATGEEK_CLIENT_ID", "").strip(), today, settings.build)
+            client_id = os.environ.get("SEATGEEK_CLIENT_ID", "").strip()
+            sg_raw = fetch_events(client_id, today, settings.build)
             tm = load_tm(args.data_dir)
             min_events = args.min_events
+        diag = diagnose(sg_raw, settings.build)
+        if not args.offline and diag["sample_id"] is not None:
+            diag["single_event_stats"] = fetch_event_stats(client_id, diag["sample_id"])
+            diag["single_event_checked"] = True
+        print("\n".join(report.stats_check(diag)))
         res = build(args.out, settings, sg_raw, tm, today, now, state, logos=not args.no_logos,
                     min_events=min_events)
         del sg_raw  # nothing from the SeatGeek response outlives the render
@@ -62,7 +68,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"::error::{exc}", file=sys.stderr)
         return 1
     report.write(report_path, res, now, "offline fixtures" if args.offline else "live",
-                 os.environ.get("GITHUB_SHA"))
+                 os.environ.get("GITHUB_SHA"), diag)
     print(f"build: {sum(res.pages.values())} pages, {len(res.parsed.games)} SeatGeek games, "
           f"{res.merged.matched} matched with Ticketmaster, {res.changed} changed, "
           f"{res.sitemap_urls} in sitemap -> {args.out}")
