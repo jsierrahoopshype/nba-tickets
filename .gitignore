@@ -1,0 +1,7 @@
+# build output and the data repo checkout (never committed)
+site/
+_data/
+.offline/
+__pycache__/
+.pytest_cache/
+*.pyc
