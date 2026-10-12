@@ -196,6 +196,14 @@ def _num(v):
         return None
 
 
+def _count(stats: dict) -> int | None:
+    for key in ("listing_count", "visible_listing_count"):
+        v = _num(stats.get(key))
+        if v is not None:
+            return int(v)
+    return None
+
+
 def parse_events(raw: list[dict], teams: list[Team], build: dict) -> ParseResult:
     matcher = TeamMatcher(teams)
     start = date.fromisoformat(build["season_start"])
@@ -256,7 +264,7 @@ def parse_events(raw: list[dict], teams: list[Team], build: dict) -> ParseResult
                 median=_num(stats.get("median_price")),
                 average=_num(stats.get("average_price")),
                 highest=_num(stats.get("highest_price")),
-                listings=int(stats["listing_count"]) if stats.get("listing_count") is not None else None,
+                listings=_count(stats),
             ),
             home_from=home_from,
         ))

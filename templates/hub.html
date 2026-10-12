@@ -40,20 +40,21 @@
 <script src="{{ asset('assets/my-team.js') }}"></script>
 
 <section class="block" id="week">
-<div class="block-head"><h2>{{ copy.hub.week_heading_first if st.week_is_first else copy.hub.week_heading }}</h2>
-{% if st.week_start %}<span class="sub">From {{ st.week_start|dshort }}</span>{% endif %}</div>
-{{ game_list(st.week, empty="No games with SeatGeek listings in the next seven days.") }}
+<div class="block-head"><h2>{{ copy.hub.week_heading_first if st.week_is_first else copy.hub.week_heading }}</h2></div>
+{% if st.week_start %}<p class="block-intro">Games from {{ st.week_start|dshort }}, cheapest first.</p>{% endif %}
+{{ game_list(st.week, empty=(copy.price_terms.prices_unavailable if not prices_available else "No games with SeatGeek listings in the next seven days.")) }}
 </section>
 
 <section class="block" id="cheapest-home">
-<div class="block-head"><h2>{{ copy.hub.cheapest_home_heading }}</h2><span class="sub">{{ copy.price_terms.get_in_long }}</span></div>
+<div class="block-head"><h2>{{ copy.hub.cheapest_home_heading }}</h2></div>
+<p class="block-intro">Get-in price: the lowest listed on SeatGeek.</p>
 <ol class="rl">
 {% for t in teams %}
 {% set g = st.teams[t.code].cheapest_home %}
 <li>
 <span class="nm">{{ team_logo(t, 28) }}<span><a href="{{ team_path(t) }}">{{ t.short_name }}</a>
-{% if g %}<small>vs <a href="{{ game_path(g) }}">{{ g.away.short_name }}</a> · {{ g.date|dshort }}</small>{% else %}<small>No home games with listings</small>{% endif %}</span></span>
-{% if g %}<span class="v">{{ g.price|money }}<small>{% if g.sg.median %}med {{ g.sg.median|money }} · {% endif %}{{ g.sg.listings }} listings</small></span>{% endif %}
+{% if g %}<small>vs <a href="{{ game_path(g) }}">{{ g.away.short_name }}</a> · {{ g.date|dshort }}</small>{% else %}<small>{{ copy.price_terms.unavailable if not prices_available else "No home games with listings" }}</small>{% endif %}</span></span>
+{% if g %}<span class="v">{{ g.price|money }}{% if g.sg.median or g.sg.listings is not none %}<small>{% if g.sg.median %}med {{ g.sg.median|money }}{% endif %}{% if g.sg.median and g.sg.listings is not none %} · {% endif %}{% if g.sg.listings is not none %}{{ g.sg.listings }} listings{% endif %}</small>{% endif %}</span>{% endif %}
 </li>
 {% endfor %}
 </ol>
@@ -73,7 +74,7 @@
 <span class="v">{{ s.home_avg|money }}<small>avg get-in</small></span></li>
 {% endfor %}
 </ol>
-{% else %}<p class="empty">No home games with listings yet.</p>{% endif %}
+{% else %}<p class="empty">{{ copy.price_terms.prices_unavailable if not prices_available else "No home games with listings yet." }}</p>{% endif %}
 </section>
 
 <section class="block" id="premium">
@@ -88,12 +89,13 @@
 <span class="v {{ 'up' if s.premium > 1.005 else ('down' if s.premium < 0.995 else '') }}">{{ s.premium|ratio }}<small>{{ s.premium|pct_diff }}</small></span></li>
 {% endfor %}
 </ol>
-{% else %}<p class="empty">No road games with listings yet.</p>{% endif %}
+{% else %}<p class="empty">{{ copy.price_terms.prices_unavailable if not prices_available else "No road games with listings yet." }}</p>{% endif %}
 </section>
 
 <section class="block" id="expensive">
-<div class="block-head"><h2>{{ copy.hub.expensive_heading }}</h2><span class="sub">By get-in price</span></div>
-{{ game_list(st.expensive, empty="No games with listings yet.") }}
+<div class="block-head"><h2>{{ copy.hub.expensive_heading }}</h2></div>
+<p class="block-intro">Ranked by get-in price.</p>
+{{ game_list(st.expensive, empty=(copy.price_terms.prices_unavailable if not prices_available else "No games with listings yet.")) }}
 </section>
 
 <section class="block">

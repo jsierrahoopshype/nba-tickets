@@ -13,7 +13,9 @@
     "median": "Median",
     "listings": "Listings",
     "no_price": "No listings on SeatGeek",
-    "not_on_seatgeek": "Not on SeatGeek yet"
+    "not_on_seatgeek": "Not on SeatGeek yet",
+    "unavailable": "Price not available",
+    "prices_unavailable": "SeatGeek prices aren't available right now. Dates, on-sale status and buy links are still current."
   },
   "status": {
     "onsale": "On sale",

@@ -13,9 +13,11 @@ repo's GitHub Pages). Check every rule before reporting any PR.
    inside the road-trip page (`#rt-data`). No separate JSON/CSV data files on
    the site (`scripts/publish.sh` refuses to publish one). No comparison against
    earlier builds: no "price dropped", no history, no caches of earlier
-   responses. The sitemap's page-hash check is the one exception the owner asked
-   for: it stores a hash per page, which says that a page changed, never what a
-   price was.
+   responses. Two exceptions, both asked for by the owner: the sitemap's
+   page-hash check stores a hash per page, which says that a page changed, never
+   what a price was; and the "SeatGeek stats check" section of
+   reports/last-build.md shows one event's raw `stats` object (plus counts) to
+   diagnose missing prices. No other SeatGeek number goes in the report.
 2. **gh-pages never accumulates price history.** Every build force-pushes it as a
    single-commit orphan branch (`scripts/publish.sh`). Never publish any other way.
 3. **SeatGeek attribution wherever SeatGeek prices appear:** the SeatGeek logo

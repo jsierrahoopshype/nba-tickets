@@ -61,6 +61,9 @@ def main(argv: list[str] | None = None) -> int:
             diag["single_event_stats"] = fetch_event_stats(client_id, diag["sample_id"])
             diag["single_event_checked"] = True
         print("\n".join(report.stats_check(diag)))
+        if not args.offline and diag["counts"]["lowest_price_present"] == 0:
+            print("::warning::SeatGeek sent no prices (stats.lowest_price) for any event. "
+                  "The pages show 'Price not available'. See the SeatGeek stats check in the report.")
         res = build(args.out, settings, sg_raw, tm, today, now, state, logos=not args.no_logos,
                     min_events=min_events)
         del sg_raw  # nothing from the SeatGeek response outlives the render
