@@ -62,6 +62,11 @@ GitHub Actions (.github/workflows/build.yml, every 3 h, on push to main, manual)
 - CLE, HOU, MIN, NOP and UTA have no Ticketmaster home games: their home games
   show SeatGeek (and the StubHub search) only, and are not counted as unmatched.
 - The report lists counts and game keys only, never prices.
+- Two runs can build the same commit back to back (GitHub started two runs for
+  the merge of PR #1; a schedule can also fire right after a push). So the build
+  first takes `state/page-hashes.json` from the tip of main, and
+  `scripts/commit-report.sh` never rebases: it resets to the tip of main and puts
+  this build's two files on top (`tests/test_commit_report.py`).
 
 ## Secrets
 
