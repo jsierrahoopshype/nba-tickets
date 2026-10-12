@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block intro %}<p class="subtitle">{{ copy.road_trip.intro }}</p>{% endblock %}
+{% block content %}
+<section class="section">
+<form class="rt-form" id="rt-form">
+<label>Days<select name="days">{% for n in range(2, 8) %}<option value="{{ n }}"{% if n == 4 %} selected{% endif %}>{{ n }} days</option>{% endfor %}</select></label>
+<label>Games<select name="games"><option value="0">2 to 4</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></label>
+<label>Earliest start<input type="date" name="from" min="{{ rt_data.first }}" max="{{ rt_data.last }}" required></label>
+<label>Latest start<input type="date" name="to" min="{{ rt_data.first }}" max="{{ rt_data.last }}" required></label>
+<label>Max budget (USD)<input type="number" name="budget" min="0" step="10" value="400" inputmode="numeric"></label>
+<label>Travel<select name="hops"><option value="any">Drive or fly</option><option value="drive">Drive only</option></select></label>
+<label>Must include<select name="team"><option value="">Any team</option>{% for t in teams %}<option value="{{ t.code }}">{{ t.name }}</option>{% endfor %}</select></label>
+<button type="submit" class="btn primary">Find trips</button>
+</form>
+<p class="small muted" style="margin-top:.6rem">Total = one get-in ticket per game, the lowest listed on SeatGeek. Games are at most 2 days apart. Hops under {{ rt_data.drivable }} miles (straight line between arenas) are marked drivable, longer ones up to {{ "{:,}".format(rt_data.maxHop) }} miles a short flight. Travel and hotels are not included.</p>
+</section>
+<p class="rt-status" id="rt-status" aria-live="polite"></p>
+<div id="rt-results"></div>
+<noscript><p class="empty">The road trip planner needs JavaScript. Every game and price is also on the <a href="{{ site_path() }}">tickets hub</a> and the team pages.</p></noscript>
+<script type="application/json" id="rt-data">{{ rt_data|tojson }}</script>
+{% endblock %}
+{% block scripts %}<script src="{{ asset('assets/road-trip.js') }}" defer></script>{% endblock %}

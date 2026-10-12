@@ -1,0 +1,83 @@
+{# Shared pieces. Every price on the site goes through game_row or a ranked
+   row below, and every page with prices shows sg_attrib (CLAUDE.md rule 3). #}
+
+{% macro sg_attrib() %}
+<p class="sg-attrib">
+<a class="sg-logo" href="{{ seatgeek_home }}" rel="noopener" target="_blank">{% if seatgeek_logo %}<img src="{{ seatgeek_logo }}" alt="SeatGeek" width="86" height="18">{% else %}<span class="sg-word">SeatGeek</span>{% endif %}</a>
+<span>{{ copy.seatgeek_attribution.split('{time}')[0] }}<time datetime="{{ updated_iso }}" data-volatile>{{ updated_label }}</time>{{ copy.seatgeek_attribution.split('{time}')[1] }}</span>
+</p>
+{% endmacro %}
+
+{% macro team_logo(t, size=22) %}
+{% set src = logo(t) %}
+{% if src %}<img class="lg" src="{{ src }}" alt="" width="{{ size }}" height="{{ size }}" loading="lazy" decoding="async">{% else %}<span class="lg lg-txt" style="--c:{{ t.color }}" aria-hidden="true">{{ t.code }}</span>{% endif %}
+{% endmacro %}
+
+{% macro price_cell(g) %}
+<div class="gm-price">
+{% if g.price is not none %}
+<span class="p">{{ g.price|money }}</span><span class="lbl">{{ copy.price_terms.get_in }}</span>
+<span class="gm-sub">{% if g.sg.median %}{{ copy.price_terms.median }} {{ g.sg.median|money }} · {% endif %}{{ "{:,}".format(g.sg.listings) }} {{ copy.price_terms.listings|lower }}</span>
+{% elif g.sg %}
+<span class="p none">{{ copy.price_terms.no_price }}</span>
+{% else %}
+<span class="p none">{{ copy.price_terms.not_on_seatgeek }}</span>
+{% endif %}
+</div>
+{% endmacro %}
+
+{% macro buy(g) %}
+<div class="gm-buy">
+{% for l in links.for_game(g) %}
+<a class="btn{% if l.primary %} primary{% elif l.vendor == 'stubhub' %} link{% endif %}" href="{{ l.url }}" target="_blank" rel="{{ 'sponsored nofollow noopener' if l.sponsored else 'nofollow noopener' }}">{{ l.label }}</a>
+{% endfor %}
+</div>
+{% endmacro %}
+
+{# me: the team whose page this is, so the row reads "vs Grizzlies" / "at Grizzlies". #}
+{% macro game_row(g, me=none) %}
+{% set cls, label = status_of(g) %}
+<li class="gm" id="{{ g.anchor }}">
+<div class="gm-when"><span class="gm-date">{{ g.date|dshort }}</span><span>{{ g.time_local|time12 }}{% if g.time_local %} local{% endif %}</span></div>
+<div class="gm-match">
+{% if me %}
+{% set opp = g.away if g.home.code == me.code else g.home %}
+<span class="at">{{ "vs" if g.home.code == me.code else "at" }}</span>{{ team_logo(opp) }}<a href="{{ game_path(g) }}">{{ opp.short_name }}</a>
+{% else %}
+{{ team_logo(g.away) }}<a href="{{ game_path(g) }}">{{ g.away.short_name }} <span class="at">at</span> {{ g.home.short_name }}</a>{{ team_logo(g.home) }}
+{% endif %}
+<span class="gm-venue">{{ g.venue_name or g.home.arena }}{% if g.venue_city %} · {{ g.venue_city }}{% endif %}</span>
+</div>
+{{ price_cell(g) }}
+<div class="gm-meta">
+{% if label %}<span class="st {{ cls }}">{{ label }}</span>{% endif %}
+<a href="{{ how_to_watch(me or g.home) }}">How to watch</a>
+<a href="{{ game_path(g) }}">Matchup</a>
+</div>
+{{ buy(g) }}
+</li>
+{% endmacro %}
+
+{% macro game_list(games, me=none, empty="") %}
+{% if games %}
+<ol class="games">
+{% for g in games %}{{ game_row(g, me) }}{% endfor %}
+</ol>
+{% else %}
+<p class="empty">{{ empty }}</p>
+{% endif %}
+{% endmacro %}
+
+{% macro concessions(t, con) %}
+{% if con and con.status == "available" %}
+<dl class="con">
+{% for key in ["parking", "beer", "soda", "hot_dog", "water"] %}
+<div><dt>{{ copy.concessions[key] }}</dt><dd>{{ (con[key]|money) if con[key] is not none else "n/a" }}</dd></div>
+{% endfor %}
+</dl>
+{% if con.value_menu_note %}<p class="small">{{ con.value_menu_note }}</p>{% endif %}
+<p class="small muted">{% if con.last_checked %}{{ fmt(copy.concessions.checked, date=con.last_checked) }}{% endif %}{% if con.source_url %} · <a href="{{ con.source_url }}" rel="nofollow noopener" target="_blank">{{ copy.concessions.source }}</a>{% endif %}</p>
+{% else %}
+<p class="small muted">{{ fmt(copy.concessions.not_available, arena=t.arena) }}</p>
+{% endif %}
+{% endmacro %}
