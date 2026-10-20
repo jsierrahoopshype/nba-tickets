@@ -1,6 +1,6 @@
 # Last build
 
-- Built: 2026-10-19 20:42 UTC (live), commit `f80b6b8`
+- Built: 2026-10-20 00:37 UTC (live), commit `62063d4`
 - SeatGeek events returned: 1243
 - NBA regular-season games found on SeatGeek: 1197 (floor this build: 900)
   - skipped, not two NBA teams: 46
