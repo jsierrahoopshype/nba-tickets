@@ -1,15 +1,14 @@
 # Last build
 
-- Built: 2026-10-25 16:48 UTC (live), commit `dd73cea`
+- Built: 2026-10-25 21:13 UTC (live), commit `4346d14`
 - SeatGeek events returned: 1205
-- NBA regular-season games found on SeatGeek: 1160 (floor this build: 896)
-  - skipped, duplicate event id: 1
+- NBA regular-season games found on SeatGeek: 1161 (floor this build: 896)
   - skipped, not two NBA teams: 44
 - Ticketmaster schedule generated: 2026-10-25T11:47:37Z; status last checked: 2026-10-25T11:47:37Z
-- Games matched between SeatGeek and Ticketmaster: 964
+- Games matched between SeatGeek and Ticketmaster: 965
 - SeatGeek only, home team has no Ticketmaster games (CLE, HOU, MIN, NOP, UTA): 194
 - SeatGeek games with no Ticketmaster match: 2
-- Ticketmaster games with no SeatGeek match: 1
+- Ticketmaster games with no SeatGeek match: 0
 - Matched one day apart: 0
 - Duplicate SeatGeek games dropped: 0
 - Team logos copied: 30 of 30
@@ -25,7 +24,7 @@
 - total: 933
 - noindex: 933
 - sitemap URLs: 0
-- pages whose content changed (lastmod moved): 8
+- pages whose content changed (lastmod moved): 4
 
 ## SeatGeek stats check
 
@@ -54,9 +53,9 @@
 - 20270114-NOP-SAS
 - 20270411-DET-WAS
 
-## Unmatched Ticketmaster games (1)
+## Unmatched Ticketmaster games (0)
 
-- 20270212-PHX-ATL
+None.
 
 ## Matched one day apart (0)
 
