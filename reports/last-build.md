@@ -1,6 +1,6 @@
 # Last build
 
-- Built: 2026-10-28 18:29 UTC (live), commit `e3ed95c`
+- Built: 2026-10-28 22:50 UTC (live), commit `69a6ebf`
 - SeatGeek events returned: 1184
 - NBA regular-season games found on SeatGeek: 1141 (floor this build: 880)
   - skipped, not two NBA teams: 43
@@ -35,14 +35,14 @@
 - stats.listing_count > 0: 0
 - stats.visible_listing_count > 0: 0
 - stats fields that are not null, and in how many events: none
-- Top-level fields of event 18496045: `access_method`, `announce_date`, `announcements`, `conditional`, `contingent`, `created_at`, `date_tbd`, `datetime_local`, `datetime_tbd`, `datetime_utc`, `description`, `domain_information`, `enddatetime_utc`, `event_group_ids`, `event_promotion`, `expected_experience_end`, `game_number`, `home_game_number`, `id`, `integrated`, `is_open`, `is_visible`, `is_visible_override`, `links`, `main_event_id`, `onsale`, `open_domain_id`, `open_id`, `performer_order`, `performers`, `playoffs`, `popularity`, `relative_url`, `sales_end_datetime_utc`, `score`, `season_stage`, `short_title`, `stats`, `status`, `taxonomies`, `tbd_datetime_range_end_utc`, `tbd_datetime_range_start_utc`, `tdc_pv_id`, `tdc_pvo_id`, `themes`, `ticketmaster`, `time_tbd`, `title`, `type`, `url`, `venue`, `visible_at`, `visible_until_utc`
-- stats of event 18496045 (search response):
+- Top-level fields of event 18478228: `access_method`, `announce_date`, `announcements`, `conditional`, `contingent`, `created_at`, `date_tbd`, `datetime_local`, `datetime_tbd`, `datetime_utc`, `description`, `domain_information`, `enddatetime_utc`, `event_group_ids`, `event_promotion`, `expected_experience_end`, `game_number`, `home_game_number`, `id`, `integrated`, `is_open`, `is_visible`, `is_visible_override`, `links`, `main_event_id`, `onsale`, `open_domain_id`, `open_id`, `performer_order`, `performers`, `playoffs`, `popularity`, `relative_url`, `sales_end_datetime_utc`, `score`, `season_stage`, `short_title`, `stats`, `status`, `taxonomies`, `tbd_datetime_range_end_utc`, `tbd_datetime_range_start_utc`, `tdc_pv_id`, `tdc_pvo_id`, `themes`, `ticketmaster`, `time_tbd`, `title`, `type`, `url`, `venue`, `visible_at`, `visible_until_utc`
+- stats of event 18478228 (search response):
 
 ```json
 {}
 ```
 
-- stats of the same event from the single-event endpoint (/2/events/18496045):
+- stats of the same event from the single-event endpoint (/2/events/18478228):
 
 ```json
 {}
