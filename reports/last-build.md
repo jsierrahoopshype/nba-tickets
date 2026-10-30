@@ -1,13 +1,13 @@
 # Last build
 
-- Built: 2026-10-29 20:33 UTC (live), commit `0d685ad`
-- SeatGeek events returned: 1172
-- NBA regular-season games found on SeatGeek: 1129 (floor this build: 875)
-  - skipped, not two NBA teams: 43
+- Built: 2026-10-30 01:20 UTC (live), commit `a4aaab1`
+- SeatGeek events returned: 1170
+- NBA regular-season games found on SeatGeek: 1128 (floor this build: 870)
+  - skipped, not two NBA teams: 42
 - Ticketmaster schedule generated: 2026-10-29T13:21:52Z; status last checked: 2026-10-29T13:21:52Z
-- Games matched between SeatGeek and Ticketmaster: 942
+- Games matched between SeatGeek and Ticketmaster: 940
 - SeatGeek only, home team has no Ticketmaster games (CLE, HOU, MIN, NOP, UTA): 185
-- SeatGeek games with no Ticketmaster match: 2
+- SeatGeek games with no Ticketmaster match: 3
 - Ticketmaster games with no SeatGeek match: 0
 - Matched one day apart: 0
 - Duplicate SeatGeek games dropped: 0
@@ -24,32 +24,33 @@
 - total: 933
 - noindex: 933
 - sitemap URLs: 0
-- pages whose content changed (lastmod moved): 0
+- pages whose content changed (lastmod moved): 14
 
 ## SeatGeek stats check
 
-- Events returned: 1172
-- Events with a stats object: 1172
+- Events returned: 1170
+- Events with a stats object: 1170
 - stats.lowest_price present (not null): 0
 - stats.lowest_price > 0: 0
 - stats.listing_count > 0: 0
 - stats.visible_listing_count > 0: 0
 - stats fields that are not null, and in how many events: none
-- Top-level fields of event 18495515: `access_method`, `announce_date`, `announcements`, `conditional`, `contingent`, `created_at`, `date_tbd`, `datetime_local`, `datetime_tbd`, `datetime_utc`, `description`, `domain_information`, `enddatetime_utc`, `event_group_ids`, `event_promotion`, `expected_experience_end`, `game_number`, `home_game_number`, `id`, `integrated`, `is_open`, `is_visible`, `is_visible_override`, `links`, `main_event_id`, `onsale`, `open_domain_id`, `open_id`, `performer_order`, `performers`, `playoffs`, `popularity`, `relative_url`, `sales_end_datetime_utc`, `score`, `season_stage`, `short_title`, `stats`, `status`, `taxonomies`, `tbd_datetime_range_end_utc`, `tbd_datetime_range_start_utc`, `tdc_pv_id`, `tdc_pvo_id`, `themes`, `ticketmaster`, `time_tbd`, `title`, `type`, `url`, `venue`, `visible_at`, `visible_until_utc`
-- stats of event 18495515 (search response):
+- Top-level fields of event 18412987: `access_method`, `announce_date`, `announcements`, `conditional`, `contingent`, `created_at`, `date_tbd`, `datetime_local`, `datetime_tbd`, `datetime_utc`, `description`, `domain_information`, `enddatetime_utc`, `event_group_ids`, `event_promotion`, `expected_experience_end`, `game_number`, `home_game_number`, `id`, `integrated`, `is_open`, `is_visible`, `is_visible_override`, `links`, `main_event_id`, `onsale`, `open_domain_id`, `open_id`, `performer_order`, `performers`, `playoffs`, `popularity`, `relative_url`, `sales_end_datetime_utc`, `score`, `season_stage`, `short_title`, `stats`, `status`, `taxonomies`, `tbd_datetime_range_end_utc`, `tbd_datetime_range_start_utc`, `tdc_pv_id`, `tdc_pvo_id`, `themes`, `ticketmaster`, `time_tbd`, `title`, `type`, `url`, `venue`, `visible_at`, `visible_until_utc`
+- stats of event 18412987 (search response):
 
 ```json
 {}
 ```
 
-- stats of the same event from the single-event endpoint (/2/events/18495515):
+- stats of the same event from the single-event endpoint (/2/events/18412987):
 
 ```json
 {}
 ```
 
-## Unmatched SeatGeek games (2)
+## Unmatched SeatGeek games (3)
 
+- 20261029-MEM-POR
 - 20270114-NOP-SAS
 - 20270411-DET-WAS
 
