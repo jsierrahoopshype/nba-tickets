@@ -1,10 +1,10 @@
 # Last build
 
-- Built: 2026-10-31 06:15 UTC (live), commit `f5cff25`
+- Built: 2026-10-31 13:02 UTC (live), commit `2242be9`
 - SeatGeek events returned: 1158
 - NBA regular-season games found on SeatGeek: 1116 (floor this build: 865)
   - skipped, not two NBA teams: 42
-- Ticketmaster schedule generated: 2026-10-30T13:12:46Z; status last checked: 2026-10-30T13:12:46Z
+- Ticketmaster schedule generated: 2026-10-31T12:49:06Z; status last checked: 2026-10-31T12:49:06Z
 - Games matched between SeatGeek and Ticketmaster: 931
 - SeatGeek only, home team has no Ticketmaster games (CLE, HOU, MIN, NOP, UTA): 183
 - SeatGeek games with no Ticketmaster match: 2
@@ -24,7 +24,7 @@
 - total: 933
 - noindex: 933
 - sitemap URLs: 0
-- pages whose content changed (lastmod moved): 42
+- pages whose content changed (lastmod moved): 0
 
 ## SeatGeek stats check
 
