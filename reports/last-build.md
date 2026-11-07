@@ -1,6 +1,6 @@
 # Last build
 
-- Built: 2026-11-07 10:40 UTC (live), commit `7992017`
+- Built: 2026-11-07 17:51 UTC (live), commit `f8948b8`
 - SeatGeek events returned: 1105
 - NBA regular-season games found on SeatGeek: 1064 (floor this build: 828)
   - skipped, duplicate event id: 1
@@ -25,7 +25,7 @@
 - total: 933
 - noindex: 933
 - sitemap URLs: 0
-- pages whose content changed (lastmod moved): 4
+- pages whose content changed (lastmod moved): 8
 
 ## SeatGeek stats check
 
@@ -56,7 +56,7 @@
 
 ## Unmatched Ticketmaster games (1)
 
-- 20270316-CLE-GSW
+- 20261120-TOR-DET
 
 ## Matched one day apart (0)
 
